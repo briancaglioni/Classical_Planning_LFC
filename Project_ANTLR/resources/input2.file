@@ -1,0 +1,10 @@
+StatoIniziale{right(O_1, left(O_2)}
+StatoFinale{left(O_2)}
+operatore{
+	scambia(c1, c2),
+	precondizioni = {right(c1), left(c2)},
+	effetti = {right(c2), left(c1)},
+	costo = 1.5
+}
+
+scambia(O_1, O_2)
