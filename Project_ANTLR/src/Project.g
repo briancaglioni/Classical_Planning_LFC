@@ -21,7 +21,7 @@ ParserEnvironment env;
  ParserSemantic sem;
  
   void init () {
-    System.out.println("Inizio l'analisi\n");
+    System.out.println("Inizio l'analisi!\n");
     env = new ParserEnvironment ();
     sem = new ParserSemantic (env);
    }
@@ -37,33 +37,42 @@ start
 	;
 	
 statement
-	:	(definizione_stato | definizione_operatore | applicazione_azione)//  | applicazione_azione)
+	:	(definizione_stato | definizione_operatore | applicazione_azione)
+		{ System.out.println(env.getAllSymbols());}
 	;
 	
 definizione_stato
-	:	(STATOINIZIALE | STATOFINALE) OPG lista_attributi CPG;
+	:	nomeStato=(STATOINIZIALE | STATOFINALE)
+	{ sem.registraStato(nomeStato); }
+	OPG lista_attributi[nomeStato] CPG 
+	
+	;
 
-lista_attributi
-	:	 attributo*;
+lista_attributi [Token nomeStato]
+	:	 attributo[nomeStato]*;
 
-attributo
-	:	ID OPT OGGETTO CPT (COMMA attributo)*;
+attributo [Token nomeStato]
+	:	nomeAttributo=ID OPT nomeOggetto=OGGETTO 
+	{sem.registraAttributo(nomeStato, nomeAttributo, nomeOggetto);} 
+	CPT (COMMA attributo[nomeStato])*;
 	
 definizione_operatore
-	:	OPERATORE OPG azione COMMA precondizioni COMMA effetti COMMA costo CPG;
+	:	OPERATORE {sem.registraOperatore();} OPG azione COMMA precondizioni COMMA effetti COMMA costo CPG;
 
 precondizioni
-	:	PRECONDIZIONI EQ OPG lista_attributi_variabili CPG;
+	:	preconditions=PRECONDIZIONI EQ OPG lista_attributi_variabili[preconditions] CPG;
 
 
-lista_attributi_variabili
-	:	 attributo_variabile*;
+lista_attributi_variabili [Token PrecondOrEffects]
+	:	 attributo_variabile[PrecondOrEffects]*;
 
-attributo_variabile
-	:	ID OPT VARIABILE CPT (COMMA attributo_variabile)*;
+attributo_variabile [Token PrecondOrEffects]
+	:	nomeAttributoVariabile=ID OPT nomeVariabile=VARIABILE CPT
+	 { sem.registraAttributoVariabile(nomeAttributoVariabile, nomeVariabile, PrecondOrEffects); }
+	  (COMMA attributo_variabile[PrecondOrEffects])*;
 
 effetti	
-	:	EFFETTI EQ OPG lista_attributi_variabili CPG;
+	:	effects=EFFETTI EQ OPG lista_attributi_variabili[effects] CPG;
 	
 costo	:	COSTO EQ FLOAT;
 

@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g 2021-01-08 22:44:51
+// $ANTLR 3.5.1 C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g 2021-01-11 00:17:00
 
 	package myCompiler;
 
@@ -56,15 +56,15 @@ public class ProjectLexer extends Lexer {
 	public ProjectLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g"; }
+	@Override public String getGrammarFileName() { return "C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g"; }
 
 	// $ANTLR start "EQ"
 	public final void mEQ() throws RecognitionException {
 		try {
 			int _type = EQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:116:5: ( '=' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:116:7: '='
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:125:5: ( '=' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:125:7: '='
 			{
 			match('='); 
 			}
@@ -83,8 +83,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = OPT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:117:5: ( '(' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:117:7: '('
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:126:5: ( '(' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:126:7: '('
 			{
 			match('('); 
 			}
@@ -103,8 +103,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = CPT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:118:5: ( ')' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:118:7: ')'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:127:5: ( ')' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:127:7: ')'
 			{
 			match(')'); 
 			}
@@ -123,8 +123,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = OPG;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:119:5: ( '{' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:119:7: '{'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:128:5: ( '{' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:128:7: '{'
 			{
 			match('{'); 
 			}
@@ -143,8 +143,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = CPG;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:120:5: ( '}' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:120:7: '}'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:129:5: ( '}' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:129:7: '}'
 			{
 			match('}'); 
 			}
@@ -163,8 +163,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = COMMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:121:7: ( ',' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:121:9: ','
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:130:7: ( ',' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:130:9: ','
 			{
 			match(','); 
 			}
@@ -183,8 +183,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = PV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:122:4: ( ';' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:122:6: ';'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:131:4: ( ';' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:131:6: ';'
 			{
 			match(';'); 
 			}
@@ -203,8 +203,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = TRUE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:123:6: ( 'T' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:123:8: 'T'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:132:6: ( 'T' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:132:8: 'T'
 			{
 			match('T'); 
 			}
@@ -223,8 +223,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = FALSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:124:8: ( 'F' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:124:10: 'F'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:133:8: ( 'F' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:133:10: 'F'
 			{
 			match('F'); 
 			}
@@ -243,8 +243,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = STATOINIZIALE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:126:15: ( 'statoIniziale' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:126:18: 'statoIniziale'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:135:15: ( 'statoIniziale' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:135:18: 'statoIniziale'
 			{
 			match("statoIniziale"); 
 
@@ -264,8 +264,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = STATOFINALE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:127:13: ( 'statoFinale' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:127:16: 'statoFinale'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:136:13: ( 'statoFinale' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:136:16: 'statoFinale'
 			{
 			match("statoFinale"); 
 
@@ -285,8 +285,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = OPERATORE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:129:2: ( 'operatore' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:129:4: 'operatore'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:138:2: ( 'operatore' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:138:4: 'operatore'
 			{
 			match("operatore"); 
 
@@ -306,8 +306,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = PRECONDIZIONI;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:132:2: ( 'precondizioni' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:132:4: 'precondizioni'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:141:2: ( 'precondizioni' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:141:4: 'precondizioni'
 			{
 			match("precondizioni"); 
 
@@ -327,8 +327,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = EFFETTI;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:133:9: ( 'effetti' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:133:11: 'effetti'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:142:9: ( 'effetti' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:142:11: 'effetti'
 			{
 			match("effetti"); 
 
@@ -348,8 +348,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = COSTO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:134:7: ( 'costo' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:134:9: 'costo'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:143:7: ( 'costo' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:143:9: 'costo'
 			{
 			match("costo"); 
 
@@ -369,17 +369,17 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = OGGETTO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:136:10: ( ( 'O_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+ )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:136:12: ( 'O_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:146:10: ( ( 'O_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+ )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:146:12: ( 'O_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
 			{
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:136:12: ( 'O_' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:136:13: 'O_'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:146:12: ( 'O_' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:146:13: 'O_'
 			{
 			match("O_"); 
 
 			}
 
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:136:19: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:146:19: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -391,7 +391,7 @@ public class ProjectLexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -428,17 +428,17 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = VARIABILE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:137:12: ( ( 'V_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+ )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:137:14: ( 'V_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:147:12: ( ( 'V_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+ )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:147:14: ( 'V_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
 			{
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:137:14: ( 'V_' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:137:15: 'V_'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:147:14: ( 'V_' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:147:15: 'V_'
 			{
 			match("V_"); 
 
 			}
 
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:137:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:147:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -450,7 +450,7 @@ public class ProjectLexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -487,8 +487,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:138:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:138:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:148:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:148:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -498,7 +498,7 @@ public class ProjectLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:138:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:148:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -509,7 +509,7 @@ public class ProjectLexer extends Lexer {
 
 				switch (alt3) {
 				case 1 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -543,10 +543,10 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:140:5: ( ( '0' .. '9' )+ )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:140:7: ( '0' .. '9' )+
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:150:5: ( ( '0' .. '9' )+ )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:150:7: ( '0' .. '9' )+
 			{
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:140:7: ( '0' .. '9' )+
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:150:7: ( '0' .. '9' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -558,7 +558,7 @@ public class ProjectLexer extends Lexer {
 
 				switch (alt4) {
 				case 1 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -595,14 +595,14 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = FLOAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:143:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:153:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
 			int alt11=3;
 			alt11 = dfa11.predict(input);
 			switch (alt11) {
 				case 1 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:143:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:153:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
 					{
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:143:9: ( '0' .. '9' )+
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:153:9: ( '0' .. '9' )+
 					int cnt5=0;
 					loop5:
 					while (true) {
@@ -614,7 +614,7 @@ public class ProjectLexer extends Lexer {
 
 						switch (alt5) {
 						case 1 :
-							// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:
+							// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:
 							{
 							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 								input.consume();
@@ -636,7 +636,7 @@ public class ProjectLexer extends Lexer {
 					}
 
 					match('.'); 
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:143:25: ( '0' .. '9' )*
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:153:25: ( '0' .. '9' )*
 					loop6:
 					while (true) {
 						int alt6=2;
@@ -647,7 +647,7 @@ public class ProjectLexer extends Lexer {
 
 						switch (alt6) {
 						case 1 :
-							// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:
+							// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:
 							{
 							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 								input.consume();
@@ -665,7 +665,7 @@ public class ProjectLexer extends Lexer {
 						}
 					}
 
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:143:37: ( EXPONENT )?
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:153:37: ( EXPONENT )?
 					int alt7=2;
 					int LA7_0 = input.LA(1);
 					if ( (LA7_0=='E'||LA7_0=='e') ) {
@@ -673,7 +673,7 @@ public class ProjectLexer extends Lexer {
 					}
 					switch (alt7) {
 						case 1 :
-							// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:143:37: EXPONENT
+							// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:153:37: EXPONENT
 							{
 							mEXPONENT(); 
 
@@ -685,10 +685,10 @@ public class ProjectLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:144:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:154:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
 					{
 					match('.'); 
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:144:13: ( '0' .. '9' )+
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:154:13: ( '0' .. '9' )+
 					int cnt8=0;
 					loop8:
 					while (true) {
@@ -700,7 +700,7 @@ public class ProjectLexer extends Lexer {
 
 						switch (alt8) {
 						case 1 :
-							// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:
+							// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:
 							{
 							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 								input.consume();
@@ -721,7 +721,7 @@ public class ProjectLexer extends Lexer {
 						cnt8++;
 					}
 
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:144:25: ( EXPONENT )?
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:154:25: ( EXPONENT )?
 					int alt9=2;
 					int LA9_0 = input.LA(1);
 					if ( (LA9_0=='E'||LA9_0=='e') ) {
@@ -729,7 +729,7 @@ public class ProjectLexer extends Lexer {
 					}
 					switch (alt9) {
 						case 1 :
-							// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:144:25: EXPONENT
+							// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:154:25: EXPONENT
 							{
 							mEXPONENT(); 
 
@@ -741,9 +741,9 @@ public class ProjectLexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:145:9: ( '0' .. '9' )+ EXPONENT
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:155:9: ( '0' .. '9' )+ EXPONENT
 					{
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:145:9: ( '0' .. '9' )+
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:155:9: ( '0' .. '9' )+
 					int cnt10=0;
 					loop10:
 					while (true) {
@@ -755,7 +755,7 @@ public class ProjectLexer extends Lexer {
 
 						switch (alt10) {
 						case 1 :
-							// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:
+							// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:
 							{
 							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 								input.consume();
@@ -796,7 +796,7 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:149:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:159:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
 			int alt15=2;
 			int LA15_0 = input.LA(1);
 			if ( (LA15_0=='/') ) {
@@ -830,11 +830,11 @@ public class ProjectLexer extends Lexer {
 
 			switch (alt15) {
 				case 1 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:149:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:159:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 					{
 					match("//"); 
 
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:149:14: (~ ( '\\n' | '\\r' ) )*
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:159:14: (~ ( '\\n' | '\\r' ) )*
 					loop12:
 					while (true) {
 						int alt12=2;
@@ -845,7 +845,7 @@ public class ProjectLexer extends Lexer {
 
 						switch (alt12) {
 						case 1 :
-							// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:
+							// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:
 							{
 							if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t')||(input.LA(1) >= '\u000B' && input.LA(1) <= '\f')||(input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFF') ) {
 								input.consume();
@@ -863,7 +863,7 @@ public class ProjectLexer extends Lexer {
 						}
 					}
 
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:149:28: ( '\\r' )?
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:159:28: ( '\\r' )?
 					int alt13=2;
 					int LA13_0 = input.LA(1);
 					if ( (LA13_0=='\r') ) {
@@ -871,7 +871,7 @@ public class ProjectLexer extends Lexer {
 					}
 					switch (alt13) {
 						case 1 :
-							// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:149:28: '\\r'
+							// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:159:28: '\\r'
 							{
 							match('\r'); 
 							}
@@ -884,11 +884,11 @@ public class ProjectLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:150:9: '/*' ( options {greedy=false; } : . )* '*/'
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:160:9: '/*' ( options {greedy=false; } : . )* '*/'
 					{
 					match("/*"); 
 
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:150:14: ( options {greedy=false; } : . )*
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:160:14: ( options {greedy=false; } : . )*
 					loop14:
 					while (true) {
 						int alt14=2;
@@ -909,7 +909,7 @@ public class ProjectLexer extends Lexer {
 
 						switch (alt14) {
 						case 1 :
-							// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:150:42: .
+							// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:160:42: .
 							{
 							matchAny(); 
 							}
@@ -941,8 +941,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:153:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:153:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:163:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:163:9: ( ' ' | '\\t' | '\\r' | '\\n' )
 			{
 			if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 				input.consume();
@@ -969,11 +969,11 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = STRING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:161:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:161:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:171:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:171:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
 			{
 			match('\"'); 
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:161:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:171:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
 			loop16:
 			while (true) {
 				int alt16=3;
@@ -987,14 +987,14 @@ public class ProjectLexer extends Lexer {
 
 				switch (alt16) {
 				case 1 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:161:14: ESC_SEQ
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:171:14: ESC_SEQ
 					{
 					mESC_SEQ(); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:161:24: ~ ( '\\\\' | '\"' )
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:171:24: ~ ( '\\\\' | '\"' )
 					{
 					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
 						input.consume();
@@ -1029,11 +1029,11 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = CHAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:164:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:164:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:174:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:174:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
 			{
 			match('\''); 
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:164:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:174:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
 			int alt17=2;
 			int LA17_0 = input.LA(1);
 			if ( (LA17_0=='\\') ) {
@@ -1051,14 +1051,14 @@ public class ProjectLexer extends Lexer {
 
 			switch (alt17) {
 				case 1 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:164:15: ESC_SEQ
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:174:15: ESC_SEQ
 					{
 					mESC_SEQ(); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:164:25: ~ ( '\\'' | '\\\\' )
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:174:25: ~ ( '\\'' | '\\\\' )
 					{
 					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '&')||(input.LA(1) >= '(' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
 						input.consume();
@@ -1088,8 +1088,8 @@ public class ProjectLexer extends Lexer {
 	// $ANTLR start "EXPONENT"
 	public final void mEXPONENT() throws RecognitionException {
 		try {
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:169:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:169:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:179:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:179:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
 			{
 			if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
 				input.consume();
@@ -1099,7 +1099,7 @@ public class ProjectLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:169:22: ( '+' | '-' )?
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:179:22: ( '+' | '-' )?
 			int alt18=2;
 			int LA18_0 = input.LA(1);
 			if ( (LA18_0=='+'||LA18_0=='-') ) {
@@ -1107,7 +1107,7 @@ public class ProjectLexer extends Lexer {
 			}
 			switch (alt18) {
 				case 1 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:
 					{
 					if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
 						input.consume();
@@ -1122,7 +1122,7 @@ public class ProjectLexer extends Lexer {
 
 			}
 
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:169:33: ( '0' .. '9' )+
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:179:33: ( '0' .. '9' )+
 			int cnt19=0;
 			loop19:
 			while (true) {
@@ -1134,7 +1134,7 @@ public class ProjectLexer extends Lexer {
 
 				switch (alt19) {
 				case 1 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -1167,8 +1167,8 @@ public class ProjectLexer extends Lexer {
 	// $ANTLR start "HEX_DIGIT"
 	public final void mHEX_DIGIT() throws RecognitionException {
 		try {
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:172:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:182:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:
 			{
 			if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'F')||(input.LA(1) >= 'a' && input.LA(1) <= 'f') ) {
 				input.consume();
@@ -1190,7 +1190,7 @@ public class ProjectLexer extends Lexer {
 	// $ANTLR start "ESC_SEQ"
 	public final void mESC_SEQ() throws RecognitionException {
 		try {
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:176:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:186:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
 			int alt20=3;
 			int LA20_0 = input.LA(1);
 			if ( (LA20_0=='\\') ) {
@@ -1245,7 +1245,7 @@ public class ProjectLexer extends Lexer {
 
 			switch (alt20) {
 				case 1 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:176:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:186:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
 					{
 					match('\\'); 
 					if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -1259,14 +1259,14 @@ public class ProjectLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:177:9: UNICODE_ESC
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:187:9: UNICODE_ESC
 					{
 					mUNICODE_ESC(); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:178:9: OCTAL_ESC
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:188:9: OCTAL_ESC
 					{
 					mOCTAL_ESC(); 
 
@@ -1284,7 +1284,7 @@ public class ProjectLexer extends Lexer {
 	// $ANTLR start "OCTAL_ESC"
 	public final void mOCTAL_ESC() throws RecognitionException {
 		try {
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:183:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:193:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
 			int alt21=3;
 			int LA21_0 = input.LA(1);
 			if ( (LA21_0=='\\') ) {
@@ -1342,7 +1342,7 @@ public class ProjectLexer extends Lexer {
 
 			switch (alt21) {
 				case 1 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:183:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:193:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '3') ) {
@@ -1372,7 +1372,7 @@ public class ProjectLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:184:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:194:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
@@ -1394,7 +1394,7 @@ public class ProjectLexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:185:9: '\\\\' ( '0' .. '7' )
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:195:9: '\\\\' ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
@@ -1419,8 +1419,8 @@ public class ProjectLexer extends Lexer {
 	// $ANTLR start "UNICODE_ESC"
 	public final void mUNICODE_ESC() throws RecognitionException {
 		try {
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:190:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-			// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:190:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:200:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:200:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
 			{
 			match('\\'); 
 			match('u'); 
@@ -1443,173 +1443,173 @@ public class ProjectLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:8: ( EQ | OPT | CPT | OPG | CPG | COMMA | PV | TRUE | FALSE | STATOINIZIALE | STATOFINALE | OPERATORE | PRECONDIZIONI | EFFETTI | COSTO | OGGETTO | VARIABILE | ID | INT | FLOAT | COMMENT | WS | STRING | CHAR )
+		// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:8: ( EQ | OPT | CPT | OPG | CPG | COMMA | PV | TRUE | FALSE | STATOINIZIALE | STATOFINALE | OPERATORE | PRECONDIZIONI | EFFETTI | COSTO | OGGETTO | VARIABILE | ID | INT | FLOAT | COMMENT | WS | STRING | CHAR )
 		int alt22=24;
 		alt22 = dfa22.predict(input);
 		switch (alt22) {
 			case 1 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:10: EQ
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:10: EQ
 				{
 				mEQ(); 
 
 				}
 				break;
 			case 2 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:13: OPT
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:13: OPT
 				{
 				mOPT(); 
 
 				}
 				break;
 			case 3 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:17: CPT
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:17: CPT
 				{
 				mCPT(); 
 
 				}
 				break;
 			case 4 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:21: OPG
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:21: OPG
 				{
 				mOPG(); 
 
 				}
 				break;
 			case 5 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:25: CPG
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:25: CPG
 				{
 				mCPG(); 
 
 				}
 				break;
 			case 6 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:29: COMMA
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:29: COMMA
 				{
 				mCOMMA(); 
 
 				}
 				break;
 			case 7 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:35: PV
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:35: PV
 				{
 				mPV(); 
 
 				}
 				break;
 			case 8 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:38: TRUE
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:38: TRUE
 				{
 				mTRUE(); 
 
 				}
 				break;
 			case 9 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:43: FALSE
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:43: FALSE
 				{
 				mFALSE(); 
 
 				}
 				break;
 			case 10 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:49: STATOINIZIALE
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:49: STATOINIZIALE
 				{
 				mSTATOINIZIALE(); 
 
 				}
 				break;
 			case 11 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:63: STATOFINALE
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:63: STATOFINALE
 				{
 				mSTATOFINALE(); 
 
 				}
 				break;
 			case 12 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:75: OPERATORE
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:75: OPERATORE
 				{
 				mOPERATORE(); 
 
 				}
 				break;
 			case 13 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:85: PRECONDIZIONI
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:85: PRECONDIZIONI
 				{
 				mPRECONDIZIONI(); 
 
 				}
 				break;
 			case 14 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:99: EFFETTI
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:99: EFFETTI
 				{
 				mEFFETTI(); 
 
 				}
 				break;
 			case 15 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:107: COSTO
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:107: COSTO
 				{
 				mCOSTO(); 
 
 				}
 				break;
 			case 16 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:113: OGGETTO
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:113: OGGETTO
 				{
 				mOGGETTO(); 
 
 				}
 				break;
 			case 17 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:121: VARIABILE
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:121: VARIABILE
 				{
 				mVARIABILE(); 
 
 				}
 				break;
 			case 18 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:131: ID
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:131: ID
 				{
 				mID(); 
 
 				}
 				break;
 			case 19 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:134: INT
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:134: INT
 				{
 				mINT(); 
 
 				}
 				break;
 			case 20 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:138: FLOAT
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:138: FLOAT
 				{
 				mFLOAT(); 
 
 				}
 				break;
 			case 21 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:144: COMMENT
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:144: COMMENT
 				{
 				mCOMMENT(); 
 
 				}
 				break;
 			case 22 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:152: WS
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:152: WS
 				{
 				mWS(); 
 
 				}
 				break;
 			case 23 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:155: STRING
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:155: STRING
 				{
 				mSTRING(); 
 
 				}
 				break;
 			case 24 :
-				// C:\\Users\\MorBri\\eclipse-workspace\\Project_ANTLR\\src\\Project.g:1:162: CHAR
+				// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\Project.g:1:162: CHAR
 				{
 				mCHAR(); 
 
@@ -1673,7 +1673,7 @@ public class ProjectLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "142:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
+			return "152:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
 		}
 	}
 
