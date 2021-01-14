@@ -1,10 +1,191 @@
-lexer grammar Project;
+grammar Project;
 
-ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
-    ;
+options {
+	language = Java;
+	k=1;
+}
+@lexer::header {
+	package myCompiler;
+}
+@lexer::members {
+}
 
-INT :	'0'..'9'+
-    ;
+@header {
+package myCompiler;
+import util.*;
+import java.util.Hashtable;
+
+}
+@members {
+ParserEnvironment env;
+ ParserSemantic sem;
+ 
+  void init () {
+    System.out.println("Inizio l'analisi!\n");
+    env = new ParserEnvironment ();
+    sem = new ParserSemantic (env);
+   }
+  
+  public Hashtable<String, Hashtable<String, String>> getVariables() {
+    return env.symbolTable;
+  }
+}
+
+start
+@init { init(); }
+	:	(definizione_stato | definizione_operatore | applicazione_azione)+
+	;
+	
+
+definizione_stato
+	:	nomeStato=(STATOINIZIALE | STATOFINALE)
+		{Stato x = new Stato($nomeStato.getText()); }
+			OPG 
+				(a1=attributo {x.addAttributo(a1);}
+				( COMMA a2=attributo {x.addAttributo(a2);})*)?
+			CPG 
+		{sem.registraStato(x);}
+			
+	;
+attributo returns [Attributo a]
+	:	nomeAttributo=ID 
+		OPT 
+			nomeOggetto=OGGETTO 
+		CPT 
+		{a = new Attributo($nomeAttributo.getText(), $nomeOggetto.getText());}
+		;
+
+
+
+definizione_operatore
+	:	OPERATORE 
+			OPG 
+				a=azione COMMA 		
+				p=precondizioni COMMA 	
+				e=effetti COMMA 	
+				c=costo 		
+			CPG
+			{sem.registraOperatore(a,p,e,c);} 
+		;
+
+azione	returns [Azione a] :	x=ID {Azione y = new Azione($x.getText());}
+				OPT 
+					v1=VARIABILE {y.addVariabile($v1.getText());}
+					( COMMA v2=VARIABILE {y.addVariabile($v2.getText());} )* 
+				CPT
+				{a = y;}
+				;
+
+precondizioni returns [Precondizioni p]
+	:	PRECONDIZIONI {Precondizioni pr = new Precondizioni();} 
+		EQ 
+		OPG
+			 (av1=attributo_variabile {pr.addAttrVariabile(av1);}
+			 (COMMA av2=attributo_variabile {pr.addAttrVariabile(av2);})*)?
+		CPG
+		{p = pr;}
+		;
+
+effetti	returns [Effetti e]
+	:	effects=EFFETTI {Effetti ef = new Effetti();}
+		EQ 
+		OPG 
+			(av1=attributo_variabile {ef.addAttrVariabile(av1);}
+			(COMMA av2=attributo_variabile {ef.addAttrVariabile(av2);})*)?
+		CPG
+		{e = ef;}
+		;
+
+attributo_variabile returns [AttributoVariabile x]
+	:	nomeAV=ID
+		OPT 
+			nomeVar=VARIABILE 
+		CPT
+		{x = new AttributoVariabile($nomeAV.getText(), $nomeVar.getText());}
+	;
+
+
+	
+costo returns [Costo c]:	COSTO
+				EQ
+				x=FLOAT
+				{c = new Costo($x.getText());}
+				;
+
+
+
+applicazione_azione
+	:	x=ID {Applicazione a = new Applicazione($x.getText());}
+		OPT 
+			o1=OGGETTO {a.addOggetto($o1.getText());}
+			(COMMA o2=OGGETTO {a.addOggetto($o2.getText());})*
+		CPT
+		{a.esegui();}
+		;
+		
+
+
+/*
+command 
+	:(COM x=IDM {System.out.println("\nCommand " + $x.getText()); sem.registerState(x);} EQ OP (attr[$x.getText()])+ PV)
+	;
+statedef 
+	: STATE  x=IDm {
+	System.out.println("\nStatedef " + $x.getText());
+	sem.registerState(x);
+	} EQ OP (attr[$x.getText()])+ PV 
+	;
+
+attr [String s]
+	: x=IDM EQ v=(TRUE | FALSE) (COMMA | CP) {
+	sem.registerAttr(s, x, v);
+	System.out.println(s + " | " +$x.getText() + "=" + $v.getText());}
+	;
+	
+action	:	
+	x=IDm ARROW y=IDM{
+	System.out.println("\nAction " + $y.getText()+ " on " + $x.getText());
+	System.out.println(getVariables());
+	sem.applyCommand($x.getText(), $y.getText());
+	System.out.println(getVariables());
+	sem.checkObj();
+	}
+	PV
+	;
+objective_def 
+	: x=OBJ {
+	sem.registerState(x);
+	System.out.println("Objdef");} EQ OP (attr[$x.getText()])+ PV 
+	;
+*/
+//LEXER TOKENS
+	
+EQ 	:	'=';
+OPT	:	'(';
+CPT	:	')';
+OPG	:	'{';
+CPG	:	'}';
+COMMA	:	',';	
+PV	:	';';
+TRUE	:	'T';	
+FALSE 	:	'F';
+
+STATOINIZIALE	:	 'statoIniziale';
+STATOFINALE	:	 'statoFinale';
+OPERATORE
+	:	'operatore';
+	
+PRECONDIZIONI
+	:	'precondizioni';
+EFFETTI	:	'effetti';
+COSTO	:	'costo';
+
+
+OGGETTO  :	('O_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')+;
+VARIABILE  :	('V_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')+;
+ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
+
+INT :	'0'..'9'+;
 
 FLOAT
     :   ('0'..'9')+ '.' ('0'..'9')* EXPONENT?

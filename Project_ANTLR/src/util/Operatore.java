@@ -4,81 +4,114 @@ import java.util.ArrayList;
 
 public class Operatore extends Symbol{
 	
-	static int last_id = 0;
+	private static int last_id = 0;
 	private int id;
 	private Azione azione;
-	private ArrayList<AttributoVariabile> precondizioni;
-	private ArrayList<AttributoVariabile> effetti;
-	private float costo;
+	private Precondizioni precondizioni;
+	private Effetti effetti;
+	private Costo costo;
 	
-	public Operatore() {
+
+	
+	public Operatore(Azione azione, Precondizioni precondizioni, Effetti effetti, Costo costo) {
+		super();
 		this.id = last_id++;
-		this.precondizioni = new ArrayList<>();
-		this.effetti = new ArrayList<>();
-		
+		this.azione = azione;
+		this.precondizioni = precondizioni;
+		this.effetti = effetti;
+		this.costo = costo;
 	}
 	
-	public int getId() {
-		return id;
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Operatore [id=" + id + ", azione=" + azione + ", precondizioni=" + precondizioni + ", effetti="
+				+ effetti + ", costo=" + costo + "]";
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
+
+
 
 	public static int getLast_id() {
 		return last_id;
 	}
 
+
+
 	public static void setLast_id(int last_id) {
 		Operatore.last_id = last_id;
 	}
+
+
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
 
 	public Azione getAzione() {
 		return azione;
 	}
 
+
+
 	public void setAzione(Azione azione) {
 		this.azione = azione;
 	}
 
-	public ArrayList<AttributoVariabile> getPrecondizioni() {
+
+
+	public Precondizioni getPrecondizioni() {
 		return precondizioni;
 	}
 
-	public void setPrecondizioni(ArrayList<AttributoVariabile> precondizioni) {
+
+
+	public void setPrecondizioni(Precondizioni precondizioni) {
 		this.precondizioni = precondizioni;
 	}
 
-	public ArrayList<AttributoVariabile> getEffetti() {
+
+
+	public Effetti getEffetti() {
 		return effetti;
 	}
 
-	public void setEffetti(ArrayList<AttributoVariabile> effetti) {
+
+
+	public void setEffetti(Effetti effetti) {
 		this.effetti = effetti;
 	}
 
-	public float getCosto() {
+
+
+	public Costo getCosto() {
 		return costo;
 	}
 
-	public void setCosto(float costo) {
+
+
+	public void setCosto(Costo costo) {
 		this.costo = costo;
 	}
-	
+
+
+
 	@Override
 	public boolean equals(Object operatore) {
 		return this.id == ((Operatore) operatore).getId();
 	}
 	
-	@Override
-	public String toString() {
-		return "{" + "azione: " + this.azione 
-				+", precondizioni: "+ this.precondizioni
-				+ ", effetti: " + this.effetti 
-				+ ", costo: " + String.valueOf(this.costo) 
-				+"}";
-	}
+
 	
 	
 	

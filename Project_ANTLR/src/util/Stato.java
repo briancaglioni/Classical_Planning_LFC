@@ -18,7 +18,7 @@ public class Stato extends Symbol{
 
 	@Override
 	public String toString() {
-		return this.nome  +this.listaAttributi.toString();
+		return this.nome + " "  +this.listaAttributi.toString();
 	}
 
 	public String getNome() {
@@ -33,6 +33,10 @@ public class Stato extends Symbol{
 	public boolean equals(Object stato) {
 		if(stato instanceof Operatore) return false;
 		return this.nome.equals(((Stato) stato).getNome());
+	}
+	
+	public void addAttributo(Attributo a) {
+		listaAttributi.add(a);
 	}
 }
 
