@@ -20,6 +20,7 @@ public class ParserEnvironment {
 	}
 	
 	public Hashtable<String, Symbol> getAllSymbols() {
+		System.out.println("getAllSymbols");
 		return symbolTable;
 	}
 }

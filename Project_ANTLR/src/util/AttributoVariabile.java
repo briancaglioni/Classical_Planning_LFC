@@ -6,9 +6,9 @@ public class AttributoVariabile {
 	final String variabile;
 	
 	
-	public AttributoVariabile(String name, String variabile) {
+	public AttributoVariabile(String nome, String variabile) {
 		super();
-		this.nome = name;
+		this.nome = nome;
 		this.variabile = variabile;
 	}
 
@@ -18,9 +18,6 @@ public class AttributoVariabile {
 	}
 
 
-	public String getOggetto() {
-		return variabile;
-	}
 
 	public boolean equals(Object attr) {
 		

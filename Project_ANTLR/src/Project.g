@@ -38,7 +38,7 @@ start
 	
 statement
 	:	(definizione_stato | definizione_operatore | applicazione_azione)
-		{ System.out.println(env.getAllSymbols());}
+		{ System.out.println("ciao");}
 	;
 	
 definizione_stato

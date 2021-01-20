@@ -2,10 +2,10 @@ package util;
 
 public class Attributo {
 	final String nome;
-	final String oggetto;
+	final Oggetto oggetto;
 	
 	
-	public Attributo(String name, String oggetto) {
+	public Attributo(String name, Oggetto oggetto) {
 		super();
 		this.nome = name;
 		this.oggetto = oggetto;
@@ -17,7 +17,7 @@ public class Attributo {
 	}
 
 
-	public String getOggetto() {
+	public Oggetto getOggetto() {
 		return oggetto;
 	}
 

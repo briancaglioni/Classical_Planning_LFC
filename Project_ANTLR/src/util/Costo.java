@@ -1,25 +1,27 @@
 package util;
 
 public class Costo {
-	float costo;
+	float valore;
 	
 	@Override
 	public String toString() {
-		return "Costo:" + costo;
+		return "Costo:" + valore;
 	}
 
-	public Costo(String costo) {
+	public Costo(String valore) {
 		super();
-		this.costo = Float.parseFloat(costo);
+		this.valore = Float.parseFloat(valore);
 	}
 
-	public float getCosto() {
-		return costo;
+	public float getValore() {
+		return valore;
 	}
 
-	public void setCosto(float costo) {
-		this.costo = costo;
+	public void setValore(float valore) {
+		this.valore = valore;
 	}
+
+	
 	
 	
 }

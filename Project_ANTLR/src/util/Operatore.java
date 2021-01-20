@@ -11,7 +11,7 @@ public class Operatore extends Symbol{
 	private Effetti effetti;
 	private Costo costo;
 	
-
+	
 	
 	public Operatore(Azione azione, Precondizioni precondizioni, Effetti effetti, Costo costo) {
 		super();
@@ -25,6 +25,12 @@ public class Operatore extends Symbol{
 	
 	
 	
+	public Operatore() {
+	}
+
+
+
+
 	@Override
 	public String toString() {
 		return "Operatore [id=" + id + ", azione=" + azione + ", precondizioni=" + precondizioni + ", effetti="

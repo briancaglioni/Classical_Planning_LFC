@@ -26,14 +26,15 @@ ParserEnvironment env;
     sem = new ParserSemantic (env);
    }
   
-  public Hashtable<String, Hashtable<String, String>> getVariables() {
+  public Hashtable<String, Symbol> getVariables() {
     return env.symbolTable;
   }
 }
 
 start
-@init { init(); }
-	:	(definizione_stato | definizione_operatore | applicazione_azione)+
+@init { init(); c = new Costo("0.0"); }
+	:	(definizione_stato | definizione_operatore | c=applicazione_azione[c])+
+		{System.out.println(getVariables()); System.out.println(c);}
 	;
 	
 
@@ -52,7 +53,7 @@ attributo returns [Attributo a]
 		OPT 
 			nomeOggetto=OGGETTO 
 		CPT 
-		{a = new Attributo($nomeAttributo.getText(), $nomeOggetto.getText());}
+		{a = new Attributo($nomeAttributo.getText(), new Oggetto($nomeOggetto.getText()));}
 		;
 
 
@@ -114,13 +115,13 @@ costo returns [Costo c]:	COSTO
 
 
 
-applicazione_azione
+applicazione_azione [Costo c] returns [Costo c1]
 	:	x=ID {Applicazione a = new Applicazione($x.getText());}
 		OPT 
 			o1=OGGETTO {a.addOggetto($o1.getText());}
 			(COMMA o2=OGGETTO {a.addOggetto($o2.getText());})*
 		CPT
-		{a.esegui();}
+		{ c1 = sem.applicaAzione(a, c);}
 		;
 		
 

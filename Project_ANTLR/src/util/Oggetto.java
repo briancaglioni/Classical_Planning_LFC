@@ -1,25 +1,33 @@
 package util;
 
 public class Oggetto {
-	private String oggetto;
+	private String nome;
 
 	@Override
 	public String toString() {
-		return "Oggetto [oggetto=" + oggetto + "]";
+		return "Oggetto [oggetto=" + nome + "]";
 	}
 
-	public Oggetto(String oggetto) {
+	public Oggetto(String nome) {
 		super();
-		this.oggetto = oggetto;
+		this.nome = nome;
 	}
 
-	public String getOggetto() {
-		return oggetto;
+
+
+	public String getNome() {
+		return nome;
 	}
 
-	public void setOggetto(String oggetto) {
-		this.oggetto = oggetto;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
+
+	@Override
+	public boolean equals(Object oggetto) {
+		return this.nome.equals(((Oggetto) oggetto).getNome()); 
+	}
+	
 	
 	
 }
