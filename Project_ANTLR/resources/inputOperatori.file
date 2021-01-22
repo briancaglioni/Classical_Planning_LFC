@@ -1,6 +1,28 @@
 operatore{
 	scambia(V_c1, V_c2),
 	precondizioni = {right(V_c1), left(V_c2)},
-	effetti = {right(V_c2), left(V_c1)},
+	effetti = {right(V_c2), left(V_c1), !right(V_c1), !left(V_c2)},
 	costo = 1.5
 }
+
+operatore{
+	spostaDx(V_ciao),
+	precondizioni = {left(V_ciao)},
+	effetti = {!left(V_ciao), right(V_ciao)},
+	costo = 1.0
+}
+
+operatore{
+	spostaSx(V_ciao),
+	precondizioni = {right(V_ciao)},
+	effetti = {!right(V_ciao), left(V_ciao)},
+	costo = 1.0
+}
+
+operatore{
+	spostaTop(V_HHH),
+	precondizioni = {},
+	effetti = {top(V_HHH)},
+	costo = 3.0
+}
+

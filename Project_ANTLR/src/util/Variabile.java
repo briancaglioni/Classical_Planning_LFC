@@ -22,4 +22,9 @@ public class Variabile {
 		return nome;
 	}
 	
+	@Override
+	public boolean equals(Object var) {
+		return this.nome.equals(((Variabile) var).getNome());
+	}
+	
 }

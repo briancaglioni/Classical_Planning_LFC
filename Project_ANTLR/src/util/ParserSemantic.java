@@ -1,6 +1,7 @@
 package util;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Hashtable;
 
 import org.antlr.runtime.Token;
@@ -31,16 +32,22 @@ public class ParserSemantic {
 	// DONE
 	public void registraOperatore(Azione a, Precondizioni p, Effetti e, Costo c) {
 
-		Operatore nuovoOperatore = new Operatore(a, p, e, c);
-		System.out.println(nuovoOperatore);
+		Operatore nuovoOperatore;
+		try {
+			nuovoOperatore = new Operatore(a, p, e, c);
+			System.out.println(nuovoOperatore);
 
-		if (env.symbolTable.contains(nuovoOperatore))
-			// controllo solo sull'id. Controllare su coppia nome - numero di variabili
-			System.err.println("ERR: Duplicazione operatore!");
-		else {
-			env.symbolTable.put(String.valueOf(nuovoOperatore.getId()), nuovoOperatore);
-			System.out.println("\tAggiunto operatore: " + nuovoOperatore.getId());
+			if (env.symbolTable.contains(nuovoOperatore))
+				// controllo solo sull'id. Controllare su coppia nome - numero di variabili
+				System.err.println("ERR: Duplicazione operatore!");
+			else {
+				env.symbolTable.put(String.valueOf(nuovoOperatore.getId()), nuovoOperatore);
+				System.out.println("\tAggiunto operatore: " + nuovoOperatore.getId());
+			}
+		} catch (Exception e1) {
+			e1.printStackTrace();
 		}
+		
 	}
 
 	private Operatore getOperatore(Applicazione app) {
@@ -85,33 +92,102 @@ public class ParserSemantic {
 			statoIntermedio = new Stato("statoIntermedio", statoIniziale.getListaAttributi());
 			env.symbolTable.put("statoIntermedio", statoIntermedio);
 		}
-
-		if (controllaPrecondizioni(statoIntermedio, a)) {
-			System.out.println("\nPrecondizioni rispettate");
-			if (applicaEffetti(statoIntermedio, a.getOperatore().getEffetti())) {
-				System.out.println("\nEffetti applicati");
-
-			}
-		}
-		
-		return new Costo(String.valueOf(c.getValore() + a.getOperatore().getCosto().getValore()));
-
-	}
-
-	private boolean controllaPrecondizioni(Stato s, Applicazione a) {
-		ArrayList<Attributo> listaA =  s.getListaAttributi();
+		ArrayList<Attributo> listaA =  statoIntermedio.getListaAttributi();
 		ArrayList<AttributoVariabile> listaPrecond = a.getOperatore().getPrecondizioni().getPrecond();
 		ArrayList<Oggetto> listaO = a.getListaOggetti();
+		ArrayList<Variabile> listaV = a.getOperatore().getAzione().getListaVariabili();
+		ArrayList<AttributoVariabile> listaEffetti = a.getOperatore().getEffetti().getEffetti();
+		int controlloP = controllaPrecondizioni(listaPrecond, listaV, listaA, listaO);
+		if (controlloP == 0) {
+			System.out.println("\nPrecondizioni rispettate");
+			if (applicaEffetti(listaEffetti, listaV, listaA, listaO) == 0) {
+				System.out.println("\nEffetti applicati");
+				System.out.println(statoIntermedio);
+				System.out.println(new Costo(String.valueOf(c.getValore() + a.getOperatore().getCosto().getValore())));
+				//controllo stato finale
+				if(controllaFinale(statoIntermedio)) {
+					System.out.println("\nHAI RAGGIUNTO LO STATO FINALE");
+					System.out.println(env.symbolTable.get("statoFinale"));
+				} else {
+					System.out.println("\nSTATO FINALE NON ANCORA RAGGIUNTO");
+					System.out.println(env.symbolTable.get("statoFinale"));
+					}
+				
+				return new Costo(String.valueOf(c.getValore() + a.getOperatore().getCosto().getValore()));
+				
+			}
+		} else if (controlloP == 1) {
+			System.out.println("Precondizioni non rispettate");
+		}
+		else {System.out.println("Oggetto mancante nell'azione");}
 		
-		// 
-		
-		return false;
+		return new Costo(String.valueOf(c.getValore()));
+
+	}
+	
+	private boolean controllaFinale(Stato statoIntermedio) {
+		Stato statoFinale = (Stato) env.symbolTable.get("statoFinale");
+		ArrayList<Attributo> listaIntermedia = statoIntermedio.getListaAttributi();
+		ArrayList<Attributo> listaFinale = statoFinale.getListaAttributi();
+		if (listaIntermedia.size() != listaFinale.size()) return false;
+		for (Attributo a : listaFinale) {
+			if(!listaIntermedia.contains(a)) return false;
+		}
+		return true;
 	}
 
-	private boolean applicaEffetti(Stato s, Effetti e) {
-
-		return false;
+	/**
+	 * Controllo precondizioni: controlla che le preocndizioni siano rispettate e che il numero di
+	 * variabili sia uguale a quello dell'azione
+	 * @param s
+	 * @param a
+	 * @param listaV 
+	 * @return
+	 */
+	private int controllaPrecondizioni(ArrayList<AttributoVariabile> listaPrecond, ArrayList<Variabile> listaV, ArrayList<Attributo> listaA, ArrayList<Oggetto> listaO) {
+		ArrayList<Attributo> listaAttrPrecond = new ArrayList<>();
+		
+		for (AttributoVariabile av : listaPrecond) {
+			Attributo attr = varToAttr(listaV, listaO, av);
+			listaAttrPrecond.add(attr);
+		}
+		
+		System.out.println(listaA);
+		System.out.println(listaAttrPrecond);
+		
+		return listaA.containsAll(listaAttrPrecond) ? 0 : 1 ;
+		
 	}
+
+	private Attributo varToAttr(ArrayList<Variabile> listaV, ArrayList<Oggetto> listaO, AttributoVariabile av) {
+		String nomeAttributo = av.getNome();
+		Variabile nomeVariabile = av.getVariabile();
+		int indice = listaV.indexOf(nomeVariabile);
+		//if(indice == -1) return -1;
+		Oggetto ogg = listaO.get(indice);
+		Attributo attr = new Attributo(nomeAttributo, ogg);
+		return attr;
+	}
+
+	private int applicaEffetti(ArrayList<AttributoVariabile> listaEffetti, ArrayList<Variabile> listaV, ArrayList<Attributo> listaA, ArrayList<Oggetto> listaO) {
+		ArrayList<Attributo> listaAttrEffettiAgg = new ArrayList<>();
+		ArrayList<Attributo> listaAttrEffettiRim = new ArrayList<>();
+		
+		for (AttributoVariabile av : listaEffetti) {
+			Attributo attr = varToAttr(listaV, listaO, av);
+			if(av.isNot())
+				listaAttrEffettiRim.add(attr);
+			else
+				listaAttrEffettiAgg.add(attr);
+		}
+		
+		//applica gli effetti
+		listaA.removeAll(listaAttrEffettiRim);
+		listaA.addAll(listaAttrEffettiAgg);
+		//ArrayList<Attributo> listaADistinct = new ArrayList<>(new HashSet<>(listaA));
+		return 0 ;
+	}
+	
 
 //---------------------------------------------------
 

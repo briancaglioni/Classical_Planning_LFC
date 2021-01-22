@@ -98,11 +98,12 @@ effetti	returns [Effetti e]
 		;
 
 attributo_variabile returns [AttributoVariabile x]
-	:	nomeAV=ID
+	:	n=NOT?
+		nomeAV=ID
 		OPT 
 			nomeVar=VARIABILE 
 		CPT
-		{x = new AttributoVariabile($nomeAV.getText(), $nomeVar.getText());}
+		{x = new AttributoVariabile($nomeAV.getText(), new Variabile($nomeVar.getText()),n);}
 	;
 
 
@@ -170,6 +171,7 @@ COMMA	:	',';
 PV	:	';';
 TRUE	:	'T';	
 FALSE 	:	'F';
+NOT	:	'!';
 
 STATOINIZIALE	:	 'statoIniziale';
 STATOFINALE	:	 'statoFinale';

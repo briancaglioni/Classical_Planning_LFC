@@ -1,2 +1,2 @@
 statoIniziale{right(O_1), left(O_2)}
-statoFinale{left(O_2)}
+statoFinale{top(O_2), right(O_1), left(O_2), top(O_1)}

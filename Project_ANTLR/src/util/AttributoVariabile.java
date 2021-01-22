@@ -1,15 +1,18 @@
 package util;
 
+import org.antlr.runtime.Token;
 
 public class AttributoVariabile {
 	final String nome;
-	final String variabile;
+	final Variabile variabile;
+	boolean not;
 	
 	
-	public AttributoVariabile(String nome, String variabile) {
+	public AttributoVariabile(String nome, Variabile variabile, Token tk) {
 		super();
 		this.nome = nome;
 		this.variabile = variabile;
+		this.not = tk == null ? false : true;
 	}
 
 
@@ -28,6 +31,21 @@ public class AttributoVariabile {
 	@Override
 	public String toString() {
 		return this.nome +"("+ this.variabile +")";
+	}
+
+
+	public Variabile getVariabile() {
+		return variabile;
+	}
+
+
+	public boolean isNot() {
+		return not;
+	}
+
+
+	public void setNot(boolean not) {
+		this.not = not;
 	}
 	
 	
