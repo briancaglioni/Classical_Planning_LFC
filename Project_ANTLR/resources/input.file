@@ -1,22 +1,22 @@
 statoIniziale{right(O_1), left(O_2)}
 statoFinale{top(O_2), right(O_1), left(O_2), top(O_1)}operatore{
 	scambia(V_c1, V_c2),
-	precondizioni = {right(V_c1), left(V_c2), right(V_c3), right(V_c2)},
-	effetti = {right(V_c2), left(V_c1), !right(V_c1), !left(V_c2)},
+	precondizioni = {left(V_c2), right(V_c1)},
+	effetti = {right(V_c2), left(V_c1), !right(V_c1), !left(V_c2), !top(V_c1)},
 	costo = 1.5
 }
 
 operatore{
 	spostaDx(V_ciao),
-	precondizioni = {},
-	effetti = {!left(V_ciao), right(V_ciao)},
+	precondizioni = {left(V_ciao)},
+	effetti = {right(V_ciao)},
 	costo = 1.0
 }
 
 operatore{
 	spostaSx(V_ciao),
 	precondizioni = {right(V_ciao)},
-	effetti = {!right(V_ciao), left(V_ciao), right(V_c3)},
+	effetti = {!right(V_ciao), left(V_ciao)},
 	costo = 1.0
 }
 
@@ -27,8 +27,9 @@ operatore{
 	costo = 3.0
 }
 
+// prova di qualche commento
 scambia(O_1, O_2)
 spostaDx(O_1)
-spostaTop(O_2)
-spostaSx(O_2)
-spostaTop(O_1)
+//spostaTop(O_2)
+//spostaSx(O_2)
+//spostaTop(O_1)

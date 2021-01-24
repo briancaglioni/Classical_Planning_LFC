@@ -68,16 +68,16 @@ public class ParserSemantic {
 		//Controllo negazione
 		//Predicate<AttributoVariabile> byNot = attrv -> attrv.isNot();
 		//ERRORE, CONTROLLARE <----
-		ArrayList<AttributoVariabile> negati = new ArrayList<AttributoVariabile>(e.getEffetti().stream().filter(attrv -> attrv.isNot()).collect(Collectors.toList()));
 		
+		ArrayList<AttributoVariabile> negati = new ArrayList<>(e.getEffetti().stream().filter(attrv -> attrv.isNot() == true).collect(Collectors.toList()));
+		System.out.println("ARRIVO QUI");
 		System.out.println(negati);
-		
+		boolean er = false;
 		for(AttributoVariabile n : negati) {
-			boolean er = p.getPrecond().stream()
+			er = p.getPrecond().stream()
 			.anyMatch(attr -> attr.getNome().equals(n.getNome()) &&
 					attr.getVariabile().equals(n.getVariabile()) &&
-					attr.isNot() == false)))
-					.collect(Collectors.toList());
+					attr.isNot() == false);
 			if(!er) addError(tk, n + " non è presente nelle precondizioni"); ;
 		}
 		
