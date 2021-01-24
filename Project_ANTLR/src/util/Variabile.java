@@ -27,4 +27,9 @@ public class Variabile {
 		return this.nome.equals(((Variabile) var).getNome());
 	}
 	
+	@Override
+	public int hashCode() {
+		return this.nome.hashCode();
+	}
+	
 }

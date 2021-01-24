@@ -3,6 +3,9 @@ package util;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Hashtable;
+import java.util.Set;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import org.antlr.runtime.Token;
 
@@ -15,39 +18,73 @@ public class ParserSemantic {
 		env = e;
 	}
 
-	// DONE
-	public void registraStato(Stato nuovoStato) {
-		System.out.println(nuovoStato);
-		if (!(nuovoStato.getNome().equals("statoIniziale") || nuovoStato.getNome().equals("statoFinale"))) {
-			env.errorList.add("Stato non valido!");
-			System.err.println("ERR: Stato non valido!");
-		}
-		if (env.symbolTable.contains(nuovoStato))
-			System.err.println("ERR: Duplicazione stato!");
-		else {
-			env.symbolTable.put(nuovoStato.getNome(), nuovoStato);
-		}
+	private void addError(Token tk, String msg) {
+		env.errorList.add("Semantic Error [" + tk.getLine() + 
+		        ", " + tk.getCharPositionInLine() + "] :" +
+		        " variable " + tk.getText() + ": " + msg);
+		System.err.println(env.errorList.get(env.errorList.size()-1));
+	}
+	
+	private void addWarning(Token tk, String msg) {
+		env.warningList.add("Warning [" + tk.getLine() + 
+		        ", " + tk.getCharPositionInLine() + "] :" +
+		        " variable " + tk.getText() + ": " + msg);
+		System.err.println("**  " + env.warningList.get(env.warningList.size()-1));
 	}
 
 	// DONE
-	public void registraOperatore(Azione a, Precondizioni p, Effetti e, Costo c) {
+	public void registraStato(Stato nuovoStato) {
+		env.symbolTable.put(nuovoStato.getNome(), nuovoStato);
+		System.out.println("\tAggiunto stato: " + nuovoStato.getNome());
+	}
 
-		Operatore nuovoOperatore;
-		try {
-			nuovoOperatore = new Operatore(a, p, e, c);
-			System.out.println(nuovoOperatore);
+	// DONE
+	public void registraOperatore(Azione a, Precondizioni p, Effetti e, Costo c, Token tk) {
+		// controllo variabili
+		Set<Variabile> insiemeVarAz = new HashSet<>(a.getListaVariabili());
+		Set<Variabile> insiemeVarP = new HashSet<>(p.getPrecond().stream().map(AttributoVariabile::getVariabile).collect(Collectors.toList()));
+		Set<Variabile> insiemeVarE = new HashSet<>(e.getEffetti().stream().map(AttributoVariabile::getVariabile).collect(Collectors.toList()));
+		
+		System.out.println("\n\n ---INSIEMI---");
+		System.out.println(insiemeVarP);
+		System.out.println(insiemeVarE);
+		
+		boolean error = false;
+		if(!insiemeVarAz.containsAll(insiemeVarP))
+				addError(tk, "una o più variabili di Precondizioni non corrispondono a quelle di Azione."); error = true;
+		if(!insiemeVarAz.containsAll(insiemeVarE))
+				addError(tk, "una o più variabili di Effetti non corrispondono a quelle di Azione."); error = true;
+		if(!error) {
+			insiemeVarP.addAll(insiemeVarE);
+			if(insiemeVarAz.size() > insiemeVarP.size())
+				addError(tk, "una o più variabili extra rispetto alle Precondizioni o Effetti");
+		}
 
-			if (env.symbolTable.contains(nuovoOperatore))
-				// controllo solo sull'id. Controllare su coppia nome - numero di variabili
-				System.err.println("ERR: Duplicazione operatore!");
-			else {
-				env.symbolTable.put(String.valueOf(nuovoOperatore.getId()), nuovoOperatore);
-				System.out.println("\tAggiunto operatore: " + nuovoOperatore.getId());
-			}
-		} catch (Exception e1) {
-			e1.printStackTrace();
+		//Controllo warning
+		ArrayList<AttributoVariabile> nuovo = new ArrayList<>(p.getPrecond());
+		nuovo.retainAll(e.getEffetti());
+		if (nuovo.size() > 0) addWarning(tk, nuovo + " attributi già soddisfatti nelle Precondizioni");
+		
+		//Controllo negazione
+		//Predicate<AttributoVariabile> byNot = attrv -> attrv.isNot();
+		//ERRORE, CONTROLLARE <----
+		ArrayList<AttributoVariabile> negati = new ArrayList<AttributoVariabile>(e.getEffetti().stream().filter(attrv -> attrv.isNot()).collect(Collectors.toList()));
+		
+		System.out.println(negati);
+		
+		for(AttributoVariabile n : negati) {
+			boolean er = p.getPrecond().stream()
+			.anyMatch(attr -> attr.getNome().equals(n.getNome()) &&
+					attr.getVariabile().equals(n.getVariabile()) &&
+					attr.isNot() == false)))
+					.collect(Collectors.toList());
+			if(!er) addError(tk, n + " non è presente nelle precondizioni"); ;
 		}
 		
+		
+		Operatore nuovoOperatore = new Operatore(a, p, e, c);
+		env.symbolTable.put(String.valueOf(nuovoOperatore.getId()), nuovoOperatore);
+		System.out.println("\tAggiunto operatore: " + nuovoOperatore.getId());
 	}
 
 	private Operatore getOperatore(Applicazione app) {

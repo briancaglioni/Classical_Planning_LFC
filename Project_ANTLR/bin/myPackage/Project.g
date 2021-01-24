@@ -29,6 +29,16 @@ ParserEnvironment env;
   public Hashtable<String, Symbol> getVariables() {
     return env.symbolTable;
   }
+  
+  public void displayRecognitionError(String[] tokenNames,
+                                     RecognitionException e) {
+     String hdr = getErrorHeader(e);
+     String msg = getErrorMessage(e, tokenNames);
+     Token tk = input.LT(1);
+     
+     env.handleError(tokenNames,e,hdr,msg);
+  }
+  
 }
 
 start
@@ -59,14 +69,14 @@ attributo returns [Attributo a]
 
 
 definizione_operatore
-	:	OPERATORE 
+	:	o=OPERATORE 
 			OPG 
 				a=azione COMMA 		
 				p=precondizioni COMMA 	
 				e=effetti COMMA 	
 				c=costo 		
 			CPG
-			{sem.registraOperatore(a,p,e,c);} 
+			{sem.registraOperatore(a,p,e,c,o);} 
 		;
 
 azione	returns [Azione a] :	x=ID {Azione y = new Azione($x.getText());}
@@ -239,3 +249,7 @@ fragment
 UNICODE_ESC
     :   '\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
     ;
+    
+ERROR	:
+	.
+	;

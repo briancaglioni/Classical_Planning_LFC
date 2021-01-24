@@ -13,18 +13,13 @@ public class Operatore extends Symbol{
 	
 	
 	
-	public Operatore(Azione azione, Precondizioni precondizioni, Effetti effetti, Costo costo) throws Exception {
+	public Operatore(Azione azione, Precondizioni precondizioni, Effetti effetti, Costo costo){
 		super();
 		this.id = last_id++;
 		this.azione = azione;
 		this.precondizioni = precondizioni;
 		this.effetti = effetti;
 		this.costo = costo;
-		
-		for(AttributoVariabile attr : precondizioni.getPrecond()) {
-			if(!azione.getListaVariabili().contains(attr.getVariabile()))
-				throw new Exception("Varibili non corrispondenti");
-		}
 	}
 	
 	

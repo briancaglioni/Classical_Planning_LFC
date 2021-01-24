@@ -3,6 +3,8 @@ package util;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
+import org.antlr.runtime.RecognitionException;
+
 
 public class ParserEnvironment {
 		
@@ -23,6 +25,29 @@ public class ParserEnvironment {
 		System.out.println("getAllSymbols");
 		return symbolTable;
 	}
+	
+	public void handleError(String[] tokenNames,
+		      RecognitionException e, String h, String m){
+
+//		        String st=h+m;
+		        String st;
+		        if (tokenNames[e.token.getType()].equals("ERROR"))
+		            st = "Lexical Error at [" + e.token.getLine() + 
+		            ", " + e.token.getCharPositionInLine()+"] : "
+		            + "Character not recognized: '"+ e.token.getText() + "'";
+		        else
+		            st = "Sintax Error at [" + e.token.getLine() + 
+		            ", " + e.token.getCharPositionInLine()+"] : "
+		            + "Found " + tokenNames[e.token.getType()] + 
+		             "'" + e.token.getText() + "' - " + m;
+
+//		        if (e instanceof MissingTokenException)
+//		           st = st + m;
+//		        st= st + "\n"+ e.getUnexpectedType()+ "\n" + h + " \n" + m ;
+		        errorList.add(st); 
+		        System.err.println(st);
+		    }
+	
 }
 
 

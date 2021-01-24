@@ -23,9 +23,10 @@ public class AttributoVariabile {
 
 
 	public boolean equals(Object attr) {
-		
-		return this.nome.equals(((Attributo) attr).getNome()) && 
-				this.variabile.equals(((Attributo) attr).getOggetto());
+		if (! (attr instanceof AttributoVariabile)) return false;
+		return this.nome.equals(((AttributoVariabile) attr).getNome()) && 
+				this.variabile.equals(((AttributoVariabile) attr).getVariabile()) &&
+				this.not == (((AttributoVariabile) attr).isNot());
 	}
 	
 	@Override
