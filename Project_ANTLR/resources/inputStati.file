@@ -1,2 +1,4 @@
-statoIniziale{right(O_1), left(O_2)}
-statoFinale{top(O_2), right(O_1), left(O_2), top(O_1)}
+statoIniziale{on_table(O_A), on_table(O_B), on_A(O_C), left(O_B), center(O_A), center(O_C), block(O_A),
+free(O_B), free(O_C), free(O_table_right)}
+statoFinale{on_table(O_A),on_table(O_B),on_table(O_C), left(O_B), right(O_C), center(O_A),  free(O_A), free(O_B), free(O_C)}
+

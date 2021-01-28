@@ -1,6 +1,1 @@
-// prova di qualche commento
-scambia(O_1, O_2)
-spostaDx(O_1)
-//spostaTop(O_2)
-//spostaSx(O_2)
-//spostaTop(O_1)
+spostaDestraSulTavoloDaOn_a(O_C, O_table_right, O_A)

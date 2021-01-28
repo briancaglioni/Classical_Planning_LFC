@@ -44,7 +44,7 @@ ParserEnvironment env;
 start
 @init { init(); c = new Costo("0.0"); }
 	:	(definizione_stato | definizione_operatore | c=applicazione_azione[c])+
-		{System.out.println(getVariables()); System.out.println(c);}
+		
 	;
 	
 
@@ -132,7 +132,7 @@ applicazione_azione [Costo c] returns [Costo c1]
 			o1=OGGETTO {a.addOggetto($o1.getText());}
 			(COMMA o2=OGGETTO {a.addOggetto($o2.getText());})*
 		CPT
-		{ c1 = sem.applicaAzione(a, c);}
+		{ c1 = sem.applicaAzione(a, c, x);}
 		;
 		
 

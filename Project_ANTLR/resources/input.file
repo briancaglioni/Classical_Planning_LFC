@@ -1,35 +1,12 @@
-statoIniziale{right(O_1), left(O_2)}
-statoFinale{top(O_2), right(O_1), left(O_2), top(O_1)}operatore{
-	scambia(V_c1, V_c2),
-	precondizioni = {left(V_c2), right(V_c1)},
-	effetti = {right(V_c2), left(V_c1), !right(V_c1), !left(V_c2), !top(V_c1)},
-	costo = 1.5
-}
+statoIniziale{on_table(O_A), on_table(O_B), on_A(O_C), left(O_B), center(O_A), center(O_C), block(O_A),
+free(O_B), free(O_C), free(O_table_right)}
+statoFinale{on_table(O_A),on_table(O_B),on_table(O_C), left(O_B), right(O_C), center(O_A),  free(O_A), free(O_B), free(O_C)}
 
 operatore{
-	spostaDx(V_ciao),
-	precondizioni = {left(V_ciao)},
-	effetti = {right(V_ciao)},
+	spostaDestraSulTavoloDaOn_a(V_oggetto, V_tavolo, V_oggettobloccato),
+	precondizioni = {free(V_oggetto), free(V_tavolo)},
+	effetti = {!center(V_oggetto), right(V_oggetto), on_table(V_oggetto), !free(V_tavolo),
+	!on_A(V_oggetto), !block(V_oggettobloccato), free(V_oggettobloccato)},
 	costo = 1.0
 }
-
-operatore{
-	spostaSx(V_ciao),
-	precondizioni = {right(V_ciao)},
-	effetti = {!right(V_ciao), left(V_ciao)},
-	costo = 1.0
-}
-
-operatore{
-	spostaTop(V_HHH),
-	precondizioni = {},
-	effetti = {top(V_HHH)},
-	costo = 3.0
-}
-
-// prova di qualche commento
-scambia(O_1, O_2)
-spostaDx(O_1)
-//spostaTop(O_2)
-//spostaSx(O_2)
-//spostaTop(O_1)
+spostaDestraSulTavoloDaOn_a(O_C, O_table_right, O_A)

@@ -31,7 +31,7 @@ public class Oggetto {
 	 */
 	@Override
 	public String toString() {
-		return "Oggetto [oggetto=" + nome + "]";
+		return nome;
 	}
 
 	// Getters.

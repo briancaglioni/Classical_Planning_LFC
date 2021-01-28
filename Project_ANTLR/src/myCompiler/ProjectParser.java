@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g 2021-01-23 22:59:47
+// $ANTLR 3.5.1 C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g 2021-01-28 16:23:04
 
 package myCompiler;
 import util.*;
@@ -69,7 +69,7 @@ public class ProjectParser extends Parser {
 	}
 
 	@Override public String[] getTokenNames() { return ProjectParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g"; }
+	@Override public String getGrammarFileName() { return "C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g"; }
 
 
 	ParserEnvironment env;
@@ -98,16 +98,16 @@ public class ProjectParser extends Parser {
 
 
 	// $ANTLR start "start"
-	// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:44:1: start : ( definizione_stato | definizione_operatore |c= applicazione_azione[c] )+ ;
+	// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:44:1: start : ( definizione_stato | definizione_operatore |c= applicazione_azione[c] )+ ;
 	public final void start() throws RecognitionException {
 		Costo c =null;
 
 		 init(); c = new Costo("0.0"); 
 		try {
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:46:2: ( ( definizione_stato | definizione_operatore |c= applicazione_azione[c] )+ )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:46:4: ( definizione_stato | definizione_operatore |c= applicazione_azione[c] )+
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:46:2: ( ( definizione_stato | definizione_operatore |c= applicazione_azione[c] )+ )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:46:4: ( definizione_stato | definizione_operatore |c= applicazione_azione[c] )+
 			{
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:46:4: ( definizione_stato | definizione_operatore |c= applicazione_azione[c] )+
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:46:4: ( definizione_stato | definizione_operatore |c= applicazione_azione[c] )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -132,7 +132,7 @@ public class ProjectParser extends Parser {
 				}
 				switch (alt1) {
 				case 1 :
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:46:5: definizione_stato
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:46:5: definizione_stato
 					{
 					pushFollow(FOLLOW_definizione_stato_in_start63);
 					definizione_stato();
@@ -141,7 +141,7 @@ public class ProjectParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:46:25: definizione_operatore
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:46:25: definizione_operatore
 					{
 					pushFollow(FOLLOW_definizione_operatore_in_start67);
 					definizione_operatore();
@@ -150,7 +150,7 @@ public class ProjectParser extends Parser {
 					}
 					break;
 				case 3 :
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:46:49: c= applicazione_azione[c]
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:46:49: c= applicazione_azione[c]
 					{
 					pushFollow(FOLLOW_applicazione_azione_in_start73);
 					c=applicazione_azione(c);
@@ -167,7 +167,6 @@ public class ProjectParser extends Parser {
 				cnt1++;
 			}
 
-			System.out.println(getVariables()); System.out.println(c);
 			}
 
 		}
@@ -184,15 +183,15 @@ public class ProjectParser extends Parser {
 
 
 	// $ANTLR start "definizione_stato"
-	// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:51:1: definizione_stato : nomeStato= ( STATOINIZIALE | STATOFINALE ) OPG (a1= attributo ( COMMA a2= attributo )* )? CPG ;
+	// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:51:1: definizione_stato : nomeStato= ( STATOINIZIALE | STATOFINALE ) OPG (a1= attributo ( COMMA a2= attributo )* )? CPG ;
 	public final void definizione_stato() throws RecognitionException {
 		Token nomeStato=null;
 		Attributo a1 =null;
 		Attributo a2 =null;
 
 		try {
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:52:2: (nomeStato= ( STATOINIZIALE | STATOFINALE ) OPG (a1= attributo ( COMMA a2= attributo )* )? CPG )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:52:4: nomeStato= ( STATOINIZIALE | STATOFINALE ) OPG (a1= attributo ( COMMA a2= attributo )* )? CPG
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:52:2: (nomeStato= ( STATOINIZIALE | STATOFINALE ) OPG (a1= attributo ( COMMA a2= attributo )* )? CPG )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:52:4: nomeStato= ( STATOINIZIALE | STATOFINALE ) OPG (a1= attributo ( COMMA a2= attributo )* )? CPG
 			{
 			nomeStato=input.LT(1);
 			if ( (input.LA(1) >= STATOFINALE && input.LA(1) <= STATOINIZIALE) ) {
@@ -204,8 +203,8 @@ public class ProjectParser extends Parser {
 				throw mse;
 			}
 			Stato x = new Stato(nomeStato.getText()); 
-			match(input,OPG,FOLLOW_OPG_in_definizione_stato110); 
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:55:5: (a1= attributo ( COMMA a2= attributo )* )?
+			match(input,OPG,FOLLOW_OPG_in_definizione_stato109); 
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:55:5: (a1= attributo ( COMMA a2= attributo )* )?
 			int alt3=2;
 			int LA3_0 = input.LA(1);
 			if ( (LA3_0==ID) ) {
@@ -213,14 +212,14 @@ public class ProjectParser extends Parser {
 			}
 			switch (alt3) {
 				case 1 :
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:55:6: a1= attributo ( COMMA a2= attributo )*
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:55:6: a1= attributo ( COMMA a2= attributo )*
 					{
-					pushFollow(FOLLOW_attributo_in_definizione_stato120);
+					pushFollow(FOLLOW_attributo_in_definizione_stato119);
 					a1=attributo();
 					state._fsp--;
 
 					x.addAttributo(a1);
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:56:5: ( COMMA a2= attributo )*
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:56:5: ( COMMA a2= attributo )*
 					loop2:
 					while (true) {
 						int alt2=2;
@@ -231,10 +230,10 @@ public class ProjectParser extends Parser {
 
 						switch (alt2) {
 						case 1 :
-							// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:56:7: COMMA a2= attributo
+							// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:56:7: COMMA a2= attributo
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_definizione_stato130); 
-							pushFollow(FOLLOW_attributo_in_definizione_stato134);
+							match(input,COMMA,FOLLOW_COMMA_in_definizione_stato129); 
+							pushFollow(FOLLOW_attributo_in_definizione_stato133);
 							a2=attributo();
 							state._fsp--;
 
@@ -252,7 +251,7 @@ public class ProjectParser extends Parser {
 
 			}
 
-			match(input,CPG,FOLLOW_CPG_in_definizione_stato145); 
+			match(input,CPG,FOLLOW_CPG_in_definizione_stato144); 
 			sem.registraStato(x);
 			}
 
@@ -270,7 +269,7 @@ public class ProjectParser extends Parser {
 
 
 	// $ANTLR start "attributo"
-	// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:61:1: attributo returns [Attributo a] : nomeAttributo= ID OPT nomeOggetto= OGGETTO CPT ;
+	// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:61:1: attributo returns [Attributo a] : nomeAttributo= ID OPT nomeOggetto= OGGETTO CPT ;
 	public final Attributo attributo() throws RecognitionException {
 		Attributo a = null;
 
@@ -279,13 +278,13 @@ public class ProjectParser extends Parser {
 		Token nomeOggetto=null;
 
 		try {
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:62:2: (nomeAttributo= ID OPT nomeOggetto= OGGETTO CPT )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:62:4: nomeAttributo= ID OPT nomeOggetto= OGGETTO CPT
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:62:2: (nomeAttributo= ID OPT nomeOggetto= OGGETTO CPT )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:62:4: nomeAttributo= ID OPT nomeOggetto= OGGETTO CPT
 			{
-			nomeAttributo=(Token)match(input,ID,FOLLOW_ID_in_attributo170); 
-			match(input,OPT,FOLLOW_OPT_in_attributo175); 
-			nomeOggetto=(Token)match(input,OGGETTO,FOLLOW_OGGETTO_in_attributo183); 
-			match(input,CPT,FOLLOW_CPT_in_attributo188); 
+			nomeAttributo=(Token)match(input,ID,FOLLOW_ID_in_attributo169); 
+			match(input,OPT,FOLLOW_OPT_in_attributo174); 
+			nomeOggetto=(Token)match(input,OGGETTO,FOLLOW_OGGETTO_in_attributo182); 
+			match(input,CPT,FOLLOW_CPT_in_attributo187); 
 			a = new Attributo(nomeAttributo.getText(), new Oggetto(nomeOggetto.getText()));
 			}
 
@@ -304,7 +303,7 @@ public class ProjectParser extends Parser {
 
 
 	// $ANTLR start "definizione_operatore"
-	// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:71:1: definizione_operatore : o= OPERATORE OPG a= azione COMMA p= precondizioni COMMA e= effetti COMMA c= costo CPG ;
+	// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:71:1: definizione_operatore : o= OPERATORE OPG a= azione COMMA p= precondizioni COMMA e= effetti COMMA c= costo CPG ;
 	public final void definizione_operatore() throws RecognitionException {
 		Token o=null;
 		Azione a =null;
@@ -313,31 +312,31 @@ public class ProjectParser extends Parser {
 		Costo c =null;
 
 		try {
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:72:2: (o= OPERATORE OPG a= azione COMMA p= precondizioni COMMA e= effetti COMMA c= costo CPG )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:72:4: o= OPERATORE OPG a= azione COMMA p= precondizioni COMMA e= effetti COMMA c= costo CPG
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:72:2: (o= OPERATORE OPG a= azione COMMA p= precondizioni COMMA e= effetti COMMA c= costo CPG )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:72:4: o= OPERATORE OPG a= azione COMMA p= precondizioni COMMA e= effetti COMMA c= costo CPG
 			{
-			o=(Token)match(input,OPERATORE,FOLLOW_OPERATORE_in_definizione_operatore209); 
-			match(input,OPG,FOLLOW_OPG_in_definizione_operatore215); 
-			pushFollow(FOLLOW_azione_in_definizione_operatore224);
+			o=(Token)match(input,OPERATORE,FOLLOW_OPERATORE_in_definizione_operatore208); 
+			match(input,OPG,FOLLOW_OPG_in_definizione_operatore214); 
+			pushFollow(FOLLOW_azione_in_definizione_operatore223);
 			a=azione();
 			state._fsp--;
 
-			match(input,COMMA,FOLLOW_COMMA_in_definizione_operatore226); 
-			pushFollow(FOLLOW_precondizioni_in_definizione_operatore237);
+			match(input,COMMA,FOLLOW_COMMA_in_definizione_operatore225); 
+			pushFollow(FOLLOW_precondizioni_in_definizione_operatore236);
 			p=precondizioni();
 			state._fsp--;
 
-			match(input,COMMA,FOLLOW_COMMA_in_definizione_operatore239); 
-			pushFollow(FOLLOW_effetti_in_definizione_operatore249);
+			match(input,COMMA,FOLLOW_COMMA_in_definizione_operatore238); 
+			pushFollow(FOLLOW_effetti_in_definizione_operatore248);
 			e=effetti();
 			state._fsp--;
 
-			match(input,COMMA,FOLLOW_COMMA_in_definizione_operatore251); 
-			pushFollow(FOLLOW_costo_in_definizione_operatore261);
+			match(input,COMMA,FOLLOW_COMMA_in_definizione_operatore250); 
+			pushFollow(FOLLOW_costo_in_definizione_operatore260);
 			c=costo();
 			state._fsp--;
 
-			match(input,CPG,FOLLOW_CPG_in_definizione_operatore269); 
+			match(input,CPG,FOLLOW_CPG_in_definizione_operatore268); 
 			sem.registraOperatore(a,p,e,c,o);
 			}
 
@@ -355,7 +354,7 @@ public class ProjectParser extends Parser {
 
 
 	// $ANTLR start "azione"
-	// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:82:1: azione returns [Azione a] : x= ID OPT v1= VARIABILE ( COMMA v2= VARIABILE )* CPT ;
+	// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:82:1: azione returns [Azione a] : x= ID OPT v1= VARIABILE ( COMMA v2= VARIABILE )* CPT ;
 	public final Azione azione() throws RecognitionException {
 		Azione a = null;
 
@@ -365,15 +364,15 @@ public class ProjectParser extends Parser {
 		Token v2=null;
 
 		try {
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:82:27: (x= ID OPT v1= VARIABILE ( COMMA v2= VARIABILE )* CPT )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:82:29: x= ID OPT v1= VARIABILE ( COMMA v2= VARIABILE )* CPT
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:82:27: (x= ID OPT v1= VARIABILE ( COMMA v2= VARIABILE )* CPT )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:82:29: x= ID OPT v1= VARIABILE ( COMMA v2= VARIABILE )* CPT
 			{
-			x=(Token)match(input,ID,FOLLOW_ID_in_azione292); 
+			x=(Token)match(input,ID,FOLLOW_ID_in_azione291); 
 			Azione y = new Azione(x.getText());
-			match(input,OPT,FOLLOW_OPT_in_azione300); 
-			v1=(Token)match(input,VARIABILE,FOLLOW_VARIABILE_in_azione310); 
+			match(input,OPT,FOLLOW_OPT_in_azione299); 
+			v1=(Token)match(input,VARIABILE,FOLLOW_VARIABILE_in_azione309); 
 			y.addVariabile(v1.getText());
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:85:6: ( COMMA v2= VARIABILE )*
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:85:6: ( COMMA v2= VARIABILE )*
 			loop4:
 			while (true) {
 				int alt4=2;
@@ -384,10 +383,10 @@ public class ProjectParser extends Parser {
 
 				switch (alt4) {
 				case 1 :
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:85:8: COMMA v2= VARIABILE
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:85:8: COMMA v2= VARIABILE
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_azione321); 
-					v2=(Token)match(input,VARIABILE,FOLLOW_VARIABILE_in_azione325); 
+					match(input,COMMA,FOLLOW_COMMA_in_azione320); 
+					v2=(Token)match(input,VARIABILE,FOLLOW_VARIABILE_in_azione324); 
 					y.addVariabile(v2.getText());
 					}
 					break;
@@ -397,7 +396,7 @@ public class ProjectParser extends Parser {
 				}
 			}
 
-			match(input,CPT,FOLLOW_CPT_in_azione337); 
+			match(input,CPT,FOLLOW_CPT_in_azione336); 
 			a = y;
 			}
 
@@ -416,7 +415,7 @@ public class ProjectParser extends Parser {
 
 
 	// $ANTLR start "precondizioni"
-	// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:90:1: precondizioni returns [Precondizioni p] : PRECONDIZIONI EQ OPG (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )? CPG ;
+	// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:90:1: precondizioni returns [Precondizioni p] : PRECONDIZIONI EQ OPG (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )? CPG ;
 	public final Precondizioni precondizioni() throws RecognitionException {
 		Precondizioni p = null;
 
@@ -425,14 +424,14 @@ public class ProjectParser extends Parser {
 		AttributoVariabile av2 =null;
 
 		try {
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:91:2: ( PRECONDIZIONI EQ OPG (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )? CPG )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:91:4: PRECONDIZIONI EQ OPG (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )? CPG
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:91:2: ( PRECONDIZIONI EQ OPG (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )? CPG )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:91:4: PRECONDIZIONI EQ OPG (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )? CPG
 			{
-			match(input,PRECONDIZIONI,FOLLOW_PRECONDIZIONI_in_precondizioni361); 
+			match(input,PRECONDIZIONI,FOLLOW_PRECONDIZIONI_in_precondizioni360); 
 			Precondizioni pr = new Precondizioni();
-			match(input,EQ,FOLLOW_EQ_in_precondizioni368); 
-			match(input,OPG,FOLLOW_OPG_in_precondizioni373); 
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:94:5: (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )?
+			match(input,EQ,FOLLOW_EQ_in_precondizioni367); 
+			match(input,OPG,FOLLOW_OPG_in_precondizioni372); 
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:94:5: (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )?
 			int alt6=2;
 			int LA6_0 = input.LA(1);
 			if ( (LA6_0==ID||LA6_0==NOT) ) {
@@ -440,14 +439,14 @@ public class ProjectParser extends Parser {
 			}
 			switch (alt6) {
 				case 1 :
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:94:6: av1= attributo_variabile ( COMMA av2= attributo_variabile )*
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:94:6: av1= attributo_variabile ( COMMA av2= attributo_variabile )*
 					{
-					pushFollow(FOLLOW_attributo_variabile_in_precondizioni382);
+					pushFollow(FOLLOW_attributo_variabile_in_precondizioni381);
 					av1=attributo_variabile();
 					state._fsp--;
 
 					pr.addAttrVariabile(av1);
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:95:5: ( COMMA av2= attributo_variabile )*
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:95:5: ( COMMA av2= attributo_variabile )*
 					loop5:
 					while (true) {
 						int alt5=2;
@@ -458,10 +457,10 @@ public class ProjectParser extends Parser {
 
 						switch (alt5) {
 						case 1 :
-							// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:95:6: COMMA av2= attributo_variabile
+							// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:95:6: COMMA av2= attributo_variabile
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_precondizioni391); 
-							pushFollow(FOLLOW_attributo_variabile_in_precondizioni395);
+							match(input,COMMA,FOLLOW_COMMA_in_precondizioni390); 
+							pushFollow(FOLLOW_attributo_variabile_in_precondizioni394);
 							av2=attributo_variabile();
 							state._fsp--;
 
@@ -479,7 +478,7 @@ public class ProjectParser extends Parser {
 
 			}
 
-			match(input,CPG,FOLLOW_CPG_in_precondizioni405); 
+			match(input,CPG,FOLLOW_CPG_in_precondizioni404); 
 			p = pr;
 			}
 
@@ -498,7 +497,7 @@ public class ProjectParser extends Parser {
 
 
 	// $ANTLR start "effetti"
-	// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:100:1: effetti returns [Effetti e] : effects= EFFETTI EQ OPG (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )? CPG ;
+	// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:100:1: effetti returns [Effetti e] : effects= EFFETTI EQ OPG (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )? CPG ;
 	public final Effetti effetti() throws RecognitionException {
 		Effetti e = null;
 
@@ -508,14 +507,14 @@ public class ProjectParser extends Parser {
 		AttributoVariabile av2 =null;
 
 		try {
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:101:2: (effects= EFFETTI EQ OPG (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )? CPG )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:101:4: effects= EFFETTI EQ OPG (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )? CPG
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:101:2: (effects= EFFETTI EQ OPG (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )? CPG )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:101:4: effects= EFFETTI EQ OPG (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )? CPG
 			{
-			effects=(Token)match(input,EFFETTI,FOLLOW_EFFETTI_in_effetti427); 
+			effects=(Token)match(input,EFFETTI,FOLLOW_EFFETTI_in_effetti426); 
 			Effetti ef = new Effetti();
-			match(input,EQ,FOLLOW_EQ_in_effetti433); 
-			match(input,OPG,FOLLOW_OPG_in_effetti438); 
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:104:4: (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )?
+			match(input,EQ,FOLLOW_EQ_in_effetti432); 
+			match(input,OPG,FOLLOW_OPG_in_effetti437); 
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:104:4: (av1= attributo_variabile ( COMMA av2= attributo_variabile )* )?
 			int alt8=2;
 			int LA8_0 = input.LA(1);
 			if ( (LA8_0==ID||LA8_0==NOT) ) {
@@ -523,14 +522,14 @@ public class ProjectParser extends Parser {
 			}
 			switch (alt8) {
 				case 1 :
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:104:5: av1= attributo_variabile ( COMMA av2= attributo_variabile )*
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:104:5: av1= attributo_variabile ( COMMA av2= attributo_variabile )*
 					{
-					pushFollow(FOLLOW_attributo_variabile_in_effetti447);
+					pushFollow(FOLLOW_attributo_variabile_in_effetti446);
 					av1=attributo_variabile();
 					state._fsp--;
 
 					ef.addAttrVariabile(av1);
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:105:4: ( COMMA av2= attributo_variabile )*
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:105:4: ( COMMA av2= attributo_variabile )*
 					loop7:
 					while (true) {
 						int alt7=2;
@@ -541,10 +540,10 @@ public class ProjectParser extends Parser {
 
 						switch (alt7) {
 						case 1 :
-							// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:105:5: COMMA av2= attributo_variabile
+							// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:105:5: COMMA av2= attributo_variabile
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_effetti455); 
-							pushFollow(FOLLOW_attributo_variabile_in_effetti459);
+							match(input,COMMA,FOLLOW_COMMA_in_effetti454); 
+							pushFollow(FOLLOW_attributo_variabile_in_effetti458);
 							av2=attributo_variabile();
 							state._fsp--;
 
@@ -562,7 +561,7 @@ public class ProjectParser extends Parser {
 
 			}
 
-			match(input,CPG,FOLLOW_CPG_in_effetti469); 
+			match(input,CPG,FOLLOW_CPG_in_effetti468); 
 			e = ef;
 			}
 
@@ -581,7 +580,7 @@ public class ProjectParser extends Parser {
 
 
 	// $ANTLR start "attributo_variabile"
-	// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:110:1: attributo_variabile returns [AttributoVariabile x] : (n= NOT )? nomeAV= ID OPT nomeVar= VARIABILE CPT ;
+	// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:110:1: attributo_variabile returns [AttributoVariabile x] : (n= NOT )? nomeAV= ID OPT nomeVar= VARIABILE CPT ;
 	public final AttributoVariabile attributo_variabile() throws RecognitionException {
 		AttributoVariabile x = null;
 
@@ -591,10 +590,10 @@ public class ProjectParser extends Parser {
 		Token nomeVar=null;
 
 		try {
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:111:2: ( (n= NOT )? nomeAV= ID OPT nomeVar= VARIABILE CPT )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:111:4: (n= NOT )? nomeAV= ID OPT nomeVar= VARIABILE CPT
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:111:2: ( (n= NOT )? nomeAV= ID OPT nomeVar= VARIABILE CPT )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:111:4: (n= NOT )? nomeAV= ID OPT nomeVar= VARIABILE CPT
 			{
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:111:5: (n= NOT )?
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:111:5: (n= NOT )?
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0==NOT) ) {
@@ -602,18 +601,18 @@ public class ProjectParser extends Parser {
 			}
 			switch (alt9) {
 				case 1 :
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:111:5: n= NOT
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:111:5: n= NOT
 					{
-					n=(Token)match(input,NOT,FOLLOW_NOT_in_attributo_variabile491); 
+					n=(Token)match(input,NOT,FOLLOW_NOT_in_attributo_variabile490); 
 					}
 					break;
 
 			}
 
-			nomeAV=(Token)match(input,ID,FOLLOW_ID_in_attributo_variabile498); 
-			match(input,OPT,FOLLOW_OPT_in_attributo_variabile502); 
-			nomeVar=(Token)match(input,VARIABILE,FOLLOW_VARIABILE_in_attributo_variabile510); 
-			match(input,CPT,FOLLOW_CPT_in_attributo_variabile515); 
+			nomeAV=(Token)match(input,ID,FOLLOW_ID_in_attributo_variabile497); 
+			match(input,OPT,FOLLOW_OPT_in_attributo_variabile501); 
+			nomeVar=(Token)match(input,VARIABILE,FOLLOW_VARIABILE_in_attributo_variabile509); 
+			match(input,CPT,FOLLOW_CPT_in_attributo_variabile514); 
 			x = new AttributoVariabile(nomeAV.getText(), new Variabile(nomeVar.getText()),n);
 			}
 
@@ -632,7 +631,7 @@ public class ProjectParser extends Parser {
 
 
 	// $ANTLR start "costo"
-	// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:121:1: costo returns [Costo c] : COSTO EQ x= FLOAT ;
+	// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:121:1: costo returns [Costo c] : COSTO EQ x= FLOAT ;
 	public final Costo costo() throws RecognitionException {
 		Costo c = null;
 
@@ -640,12 +639,12 @@ public class ProjectParser extends Parser {
 		Token x=null;
 
 		try {
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:121:24: ( COSTO EQ x= FLOAT )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:121:26: COSTO EQ x= FLOAT
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:121:24: ( COSTO EQ x= FLOAT )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:121:26: COSTO EQ x= FLOAT
 			{
-			match(input,COSTO,FOLLOW_COSTO_in_costo535); 
-			match(input,EQ,FOLLOW_EQ_in_costo541); 
-			x=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_costo549); 
+			match(input,COSTO,FOLLOW_COSTO_in_costo534); 
+			match(input,EQ,FOLLOW_EQ_in_costo540); 
+			x=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_costo548); 
 			c = new Costo(x.getText());
 			}
 
@@ -664,7 +663,7 @@ public class ProjectParser extends Parser {
 
 
 	// $ANTLR start "applicazione_azione"
-	// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:129:1: applicazione_azione[Costo c] returns [Costo c1] : x= ID OPT o1= OGGETTO ( COMMA o2= OGGETTO )* CPT ;
+	// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:129:1: applicazione_azione[Costo c] returns [Costo c1] : x= ID OPT o1= OGGETTO ( COMMA o2= OGGETTO )* CPT ;
 	public final Costo applicazione_azione(Costo c) throws RecognitionException {
 		Costo c1 = null;
 
@@ -674,15 +673,15 @@ public class ProjectParser extends Parser {
 		Token o2=null;
 
 		try {
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:130:2: (x= ID OPT o1= OGGETTO ( COMMA o2= OGGETTO )* CPT )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:130:4: x= ID OPT o1= OGGETTO ( COMMA o2= OGGETTO )* CPT
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:130:2: (x= ID OPT o1= OGGETTO ( COMMA o2= OGGETTO )* CPT )
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:130:4: x= ID OPT o1= OGGETTO ( COMMA o2= OGGETTO )* CPT
 			{
-			x=(Token)match(input,ID,FOLLOW_ID_in_applicazione_azione579); 
+			x=(Token)match(input,ID,FOLLOW_ID_in_applicazione_azione578); 
 			Applicazione a = new Applicazione(x.getText());
-			match(input,OPT,FOLLOW_OPT_in_applicazione_azione585); 
-			o1=(Token)match(input,OGGETTO,FOLLOW_OGGETTO_in_applicazione_azione593); 
+			match(input,OPT,FOLLOW_OPT_in_applicazione_azione584); 
+			o1=(Token)match(input,OGGETTO,FOLLOW_OGGETTO_in_applicazione_azione592); 
 			a.addOggetto(o1.getText());
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:133:4: ( COMMA o2= OGGETTO )*
+			// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:133:4: ( COMMA o2= OGGETTO )*
 			loop10:
 			while (true) {
 				int alt10=2;
@@ -693,10 +692,10 @@ public class ProjectParser extends Parser {
 
 				switch (alt10) {
 				case 1 :
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:133:5: COMMA o2= OGGETTO
+					// C:\\Users\\MorBri\\Documents\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:133:5: COMMA o2= OGGETTO
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_applicazione_azione601); 
-					o2=(Token)match(input,OGGETTO,FOLLOW_OGGETTO_in_applicazione_azione605); 
+					match(input,COMMA,FOLLOW_COMMA_in_applicazione_azione600); 
+					o2=(Token)match(input,OGGETTO,FOLLOW_OGGETTO_in_applicazione_azione604); 
 					a.addOggetto(o2.getText());
 					}
 					break;
@@ -706,8 +705,8 @@ public class ProjectParser extends Parser {
 				}
 			}
 
-			match(input,CPT,FOLLOW_CPT_in_applicazione_azione613); 
-			 c1 = sem.applicaAzione(a, c);
+			match(input,CPT,FOLLOW_CPT_in_applicazione_azione612); 
+			 c1 = sem.applicaAzione(a, c, x);
 			}
 
 		}
@@ -729,58 +728,58 @@ public class ProjectParser extends Parser {
 	public static final BitSet FOLLOW_definizione_stato_in_start63 = new BitSet(new long[]{0x0000000030840002L});
 	public static final BitSet FOLLOW_definizione_operatore_in_start67 = new BitSet(new long[]{0x0000000030840002L});
 	public static final BitSet FOLLOW_applicazione_azione_in_start73 = new BitSet(new long[]{0x0000000030840002L});
-	public static final BitSet FOLLOW_set_in_definizione_stato95 = new BitSet(new long[]{0x0000000001000000L});
-	public static final BitSet FOLLOW_OPG_in_definizione_stato110 = new BitSet(new long[]{0x0000000000040100L});
-	public static final BitSet FOLLOW_attributo_in_definizione_stato120 = new BitSet(new long[]{0x0000000000000120L});
-	public static final BitSet FOLLOW_COMMA_in_definizione_stato130 = new BitSet(new long[]{0x0000000000040000L});
-	public static final BitSet FOLLOW_attributo_in_definizione_stato134 = new BitSet(new long[]{0x0000000000000120L});
-	public static final BitSet FOLLOW_CPG_in_definizione_stato145 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_attributo170 = new BitSet(new long[]{0x0000000002000000L});
-	public static final BitSet FOLLOW_OPT_in_attributo175 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_OGGETTO_in_attributo183 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_CPT_in_attributo188 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_OPERATORE_in_definizione_operatore209 = new BitSet(new long[]{0x0000000001000000L});
-	public static final BitSet FOLLOW_OPG_in_definizione_operatore215 = new BitSet(new long[]{0x0000000000040000L});
-	public static final BitSet FOLLOW_azione_in_definizione_operatore224 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_COMMA_in_definizione_operatore226 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_precondizioni_in_definizione_operatore237 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_COMMA_in_definizione_operatore239 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_effetti_in_definizione_operatore249 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_COMMA_in_definizione_operatore251 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_costo_in_definizione_operatore261 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_CPG_in_definizione_operatore269 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_azione292 = new BitSet(new long[]{0x0000000002000000L});
-	public static final BitSet FOLLOW_OPT_in_azione300 = new BitSet(new long[]{0x0000000200000000L});
-	public static final BitSet FOLLOW_VARIABILE_in_azione310 = new BitSet(new long[]{0x0000000000000220L});
-	public static final BitSet FOLLOW_COMMA_in_azione321 = new BitSet(new long[]{0x0000000200000000L});
-	public static final BitSet FOLLOW_VARIABILE_in_azione325 = new BitSet(new long[]{0x0000000000000220L});
-	public static final BitSet FOLLOW_CPT_in_azione337 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_PRECONDIZIONI_in_precondizioni361 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_EQ_in_precondizioni368 = new BitSet(new long[]{0x0000000001000000L});
-	public static final BitSet FOLLOW_OPG_in_precondizioni373 = new BitSet(new long[]{0x0000000000140100L});
-	public static final BitSet FOLLOW_attributo_variabile_in_precondizioni382 = new BitSet(new long[]{0x0000000000000120L});
-	public static final BitSet FOLLOW_COMMA_in_precondizioni391 = new BitSet(new long[]{0x0000000000140000L});
-	public static final BitSet FOLLOW_attributo_variabile_in_precondizioni395 = new BitSet(new long[]{0x0000000000000120L});
-	public static final BitSet FOLLOW_CPG_in_precondizioni405 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_EFFETTI_in_effetti427 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_EQ_in_effetti433 = new BitSet(new long[]{0x0000000001000000L});
-	public static final BitSet FOLLOW_OPG_in_effetti438 = new BitSet(new long[]{0x0000000000140100L});
-	public static final BitSet FOLLOW_attributo_variabile_in_effetti447 = new BitSet(new long[]{0x0000000000000120L});
-	public static final BitSet FOLLOW_COMMA_in_effetti455 = new BitSet(new long[]{0x0000000000140000L});
-	public static final BitSet FOLLOW_attributo_variabile_in_effetti459 = new BitSet(new long[]{0x0000000000000120L});
-	public static final BitSet FOLLOW_CPG_in_effetti469 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_NOT_in_attributo_variabile491 = new BitSet(new long[]{0x0000000000040000L});
-	public static final BitSet FOLLOW_ID_in_attributo_variabile498 = new BitSet(new long[]{0x0000000002000000L});
-	public static final BitSet FOLLOW_OPT_in_attributo_variabile502 = new BitSet(new long[]{0x0000000200000000L});
-	public static final BitSet FOLLOW_VARIABILE_in_attributo_variabile510 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_CPT_in_attributo_variabile515 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_COSTO_in_costo535 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_EQ_in_costo541 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_FLOAT_in_costo549 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_applicazione_azione579 = new BitSet(new long[]{0x0000000002000000L});
-	public static final BitSet FOLLOW_OPT_in_applicazione_azione585 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_OGGETTO_in_applicazione_azione593 = new BitSet(new long[]{0x0000000000000220L});
-	public static final BitSet FOLLOW_COMMA_in_applicazione_azione601 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_OGGETTO_in_applicazione_azione605 = new BitSet(new long[]{0x0000000000000220L});
-	public static final BitSet FOLLOW_CPT_in_applicazione_azione613 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_set_in_definizione_stato94 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_OPG_in_definizione_stato109 = new BitSet(new long[]{0x0000000000040100L});
+	public static final BitSet FOLLOW_attributo_in_definizione_stato119 = new BitSet(new long[]{0x0000000000000120L});
+	public static final BitSet FOLLOW_COMMA_in_definizione_stato129 = new BitSet(new long[]{0x0000000000040000L});
+	public static final BitSet FOLLOW_attributo_in_definizione_stato133 = new BitSet(new long[]{0x0000000000000120L});
+	public static final BitSet FOLLOW_CPG_in_definizione_stato144 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_attributo169 = new BitSet(new long[]{0x0000000002000000L});
+	public static final BitSet FOLLOW_OPT_in_attributo174 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_OGGETTO_in_attributo182 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_CPT_in_attributo187 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_OPERATORE_in_definizione_operatore208 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_OPG_in_definizione_operatore214 = new BitSet(new long[]{0x0000000000040000L});
+	public static final BitSet FOLLOW_azione_in_definizione_operatore223 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_COMMA_in_definizione_operatore225 = new BitSet(new long[]{0x0000000004000000L});
+	public static final BitSet FOLLOW_precondizioni_in_definizione_operatore236 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_COMMA_in_definizione_operatore238 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_effetti_in_definizione_operatore248 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_COMMA_in_definizione_operatore250 = new BitSet(new long[]{0x0000000000000080L});
+	public static final BitSet FOLLOW_costo_in_definizione_operatore260 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_CPG_in_definizione_operatore268 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_azione291 = new BitSet(new long[]{0x0000000002000000L});
+	public static final BitSet FOLLOW_OPT_in_azione299 = new BitSet(new long[]{0x0000000200000000L});
+	public static final BitSet FOLLOW_VARIABILE_in_azione309 = new BitSet(new long[]{0x0000000000000220L});
+	public static final BitSet FOLLOW_COMMA_in_azione320 = new BitSet(new long[]{0x0000000200000000L});
+	public static final BitSet FOLLOW_VARIABILE_in_azione324 = new BitSet(new long[]{0x0000000000000220L});
+	public static final BitSet FOLLOW_CPT_in_azione336 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_PRECONDIZIONI_in_precondizioni360 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_EQ_in_precondizioni367 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_OPG_in_precondizioni372 = new BitSet(new long[]{0x0000000000140100L});
+	public static final BitSet FOLLOW_attributo_variabile_in_precondizioni381 = new BitSet(new long[]{0x0000000000000120L});
+	public static final BitSet FOLLOW_COMMA_in_precondizioni390 = new BitSet(new long[]{0x0000000000140000L});
+	public static final BitSet FOLLOW_attributo_variabile_in_precondizioni394 = new BitSet(new long[]{0x0000000000000120L});
+	public static final BitSet FOLLOW_CPG_in_precondizioni404 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_EFFETTI_in_effetti426 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_EQ_in_effetti432 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_OPG_in_effetti437 = new BitSet(new long[]{0x0000000000140100L});
+	public static final BitSet FOLLOW_attributo_variabile_in_effetti446 = new BitSet(new long[]{0x0000000000000120L});
+	public static final BitSet FOLLOW_COMMA_in_effetti454 = new BitSet(new long[]{0x0000000000140000L});
+	public static final BitSet FOLLOW_attributo_variabile_in_effetti458 = new BitSet(new long[]{0x0000000000000120L});
+	public static final BitSet FOLLOW_CPG_in_effetti468 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_NOT_in_attributo_variabile490 = new BitSet(new long[]{0x0000000000040000L});
+	public static final BitSet FOLLOW_ID_in_attributo_variabile497 = new BitSet(new long[]{0x0000000002000000L});
+	public static final BitSet FOLLOW_OPT_in_attributo_variabile501 = new BitSet(new long[]{0x0000000200000000L});
+	public static final BitSet FOLLOW_VARIABILE_in_attributo_variabile509 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_CPT_in_attributo_variabile514 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_COSTO_in_costo534 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_EQ_in_costo540 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_FLOAT_in_costo548 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_applicazione_azione578 = new BitSet(new long[]{0x0000000002000000L});
+	public static final BitSet FOLLOW_OPT_in_applicazione_azione584 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_OGGETTO_in_applicazione_azione592 = new BitSet(new long[]{0x0000000000000220L});
+	public static final BitSet FOLLOW_COMMA_in_applicazione_azione600 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_OGGETTO_in_applicazione_azione604 = new BitSet(new long[]{0x0000000000000220L});
+	public static final BitSet FOLLOW_CPT_in_applicazione_azione612 = new BitSet(new long[]{0x0000000000000002L});
 }
