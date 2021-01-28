@@ -20,6 +20,7 @@ public class TestParser {
 		String fileInOperatori = ".\\resources\\inputOperatori.file";
 		String fileInApplicazioni = ".\\resources\\inputApplicazioni.file";
 		String fileIn = ".\\resources\\input.file";
+		String fileIn2 = ".\\resources\\input2.file";
 		
 		String[] files = new String[3];
 		files[0] = fileInStati;
@@ -52,7 +53,7 @@ public class TestParser {
   	
   	try {
   		
-  		ProjectLexer  lexer = new ProjectLexer (new ANTLRReaderStream(new FileReader(fileIn))); 
+  		ProjectLexer  lexer = new ProjectLexer (new ANTLRReaderStream(new FileReader(fileIn2))); 
   		CommonTokenStream tokens = new CommonTokenStream (lexer);	
 		parser = new ProjectParser (tokens);
 	    parser.start();

@@ -1,3 +1,6 @@
+statoIniziale{on(O_A, O_Table), on(O_B, O_Table), on(O_C, O_A), free(O_B), free(O_C)}
+statoFinale{on(O_A, O_B),on(O_B, O_C),on(O_C, O_Table), free(O_A)}
+
 operatore{
 	spostaSulTavolo(V_oggetto, V_Table, V_oggettobloccato),
 	precondizioni = {free(V_oggetto), on(V_oggetto, V_oggettobloccato)},
@@ -11,3 +14,7 @@ operatore{
 	effetti = {on(V_ogg1, V_ogg2), !free(V_ogg2), !on(V_ogg1, V_ogg3)},
 	costo = 1.5
 }
+
+spostaSulTavolo(O_C, O_Table, O_A)
+sposta(O_B, O_C, O_Table)
+sposta(O_A, O_B, O_Table) 			

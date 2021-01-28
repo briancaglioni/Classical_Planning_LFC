@@ -1,6 +1,7 @@
 package util;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Set;
@@ -62,6 +63,7 @@ public class ParserSemantic {
 	public void registraStato(Stato nuovoStato) {
 		env.symbolTable.put(nuovoStato.getNome(), nuovoStato);
 		System.out.println("\tAggiunto stato: " + nuovoStato.getNome());
+		System.out.println("\t"+nuovoStato);
 	}
 
 	private boolean controllaEsistenzaStati(Token tk) {
@@ -96,9 +98,13 @@ public class ParserSemantic {
 		// controllo variabili
 		Set<Variabile> insiemeVarAz = new HashSet<>(a.getListaVariabili());
 		Set<Variabile> insiemeVarP = new HashSet<>(
-				p.getPrecond().stream().map(AttributoVariabile::getVariabile).collect(Collectors.toList()));
+				p.getPrecond().stream().map(AttributoVariabile::getListaVariabili).flatMap(Collection::stream).collect(Collectors.toList()));
 		Set<Variabile> insiemeVarE = new HashSet<>(
-				e.getEffetti().stream().map(AttributoVariabile::getVariabile).collect(Collectors.toList()));
+				e.getEffetti().stream().map(AttributoVariabile::getListaVariabili).flatMap(Collection::stream).collect(Collectors.toList()));
+
+//		System.out.println("\n\n---------------------------------------");
+//		System.out.println(insiemeVarP);
+//		System.out.println(insiemeVarE);
 
 		boolean error = false;
 		if (!insiemeVarAz.containsAll(insiemeVarP))
@@ -114,10 +120,10 @@ public class ParserSemantic {
 		}
 
 		// Controllo warning
-		ArrayList<AttributoVariabile> nuovo = new ArrayList<>(p.getPrecond());
-		nuovo.retainAll(e.getEffetti());
-		if (nuovo.size() > 0)
-			addWarning(tk, nuovo + " attributi già soddisfatti nelle Precondizioni");
+//		ArrayList<AttributoVariabile> nuovo = new ArrayList<>(p.getPrecond());
+//		nuovo.retainAll(e.getEffetti());
+//		if (nuovo.size() > 0)
+//			addWarning(tk, nuovo + " attributi già soddisfatti nelle Precondizioni");
 
 		// Controllo negazione
 		// Predicate<AttributoVariabile> byNot = attrv -> attrv.isNot();
@@ -174,6 +180,8 @@ public class ParserSemantic {
 		return operatore;
 
 	}
+	
+	
 
 	/**
 	 * Metodo che applica gli effetti di un'azione se lo stato corrente soddisfa le
@@ -251,8 +259,8 @@ public class ParserSemantic {
 			listaAttrPrecond.add(attr);
 		}
 
-//		System.out.println(listaA);
-//		System.out.println(listaAttrPrecond);
+		System.out.println("Lista attributi stato: "+listaA);
+		System.out.println("Lista attributi precondizioni: "+listaAttrPrecond);
 
 		return listaA.containsAll(listaAttrPrecond) ? true : false;
 
@@ -268,10 +276,15 @@ public class ParserSemantic {
 	 */
 	private Attributo varToAttr(ArrayList<Variabile> listaV, ArrayList<Oggetto> listaO, AttributoVariabile av) {
 		String nomeAttributo = av.getNome();
-		Variabile nomeVariabile = av.getVariabile();
-		int indice = listaV.indexOf(nomeVariabile);
-		Oggetto ogg = listaO.get(indice);
-		Attributo attr = new Attributo(nomeAttributo, ogg);
+		ArrayList<Variabile> listaVariabili = av.getListaVariabili();
+		ArrayList<Oggetto> listaOggetti = new ArrayList<Oggetto>();
+		for(Variabile v : listaVariabili) {
+			int indice = listaV.indexOf(v);
+			Oggetto ogg = listaO.get(indice);
+			listaOggetti.add(ogg);
+		
+		}
+		Attributo attr = new Attributo(nomeAttributo, listaOggetti);
 		return attr;
 	}
 
@@ -315,73 +328,4 @@ public class ParserSemantic {
 		}
 		return true;
 	}
-
-//---------------------------------------------------
-
-//	public void registerAttr (String state, Token attr, Token value) {
-//
-//		if(state == "command") {
-//			return;
-//		}
-//		Hashtable<String, String> attrs = new Hashtable<>();
-//		if (env.symbolTable.containsKey(state)) {
-//			attrs = env.symbolTable.get(state);
-//			attrs.put(attr.getText(), value.getText());		
-//		}
-//		env.symbolTable.put(state, attrs);		
-//	}
-//
-//
-//	public void applyCommand(String state, String command) {
-//		if (env.symbolTable.containsKey(state) && env.symbolTable.containsKey(command)) {
-//			System.out.println("applying command");
-//			Hashtable<String, String> commandTable = env.symbolTable.get(command);
-//			Hashtable<String, String> stateTable = env.symbolTable.get(state);
-//			commandTable.forEach((key, value)->{
-//				stateTable.put(key, value);
-//			});
-//		}
-//	}
-//
-//	String state = "";
-//
-//	public void checkObj() {
-//		System.out.println("\n\tChecking..");
-//		env.symbolTable.forEach((k, table)->{ // k == a, table == (X=T, Y=F)
-//			if(!Character.isUpperCase(k.charAt(0))) {
-//				boolean[] flag = {true};
-//				env.symbolTable.get("Obj").forEach((kk, value)->{ // k == X, value == T
-//					if(table.containsKey(kk)) {
-//						if(!table.get(kk).equals(value)){
-//							flag[0] = false;
-//						} 
-//					} else {
-//						flag[0] = false;
-//					}
-//
-//				});
-//				if(flag[0]) state += "" + k;
-//			}
-//
-//		});
-//		if(state.length() > 0)System.out.println("\tReached -> " + state);
-//
-//
-//	};
-//
-//
-//
-//	public double getValue (Token tk) {
-//		return new Double(tk.getText());
-//	}
-//
-//
-//	public Hashtable<String, String> getVarValue (Token tk) {
-//		if (env.symbolTable.containsKey(tk.getText()))
-//			return env.symbolTable.get(tk.getText());
-//
-//		System.out.println("Variabile '" + tk.getText() + "' non trovata");
-//		return new Hashtable<>();
-//	}
-
 }

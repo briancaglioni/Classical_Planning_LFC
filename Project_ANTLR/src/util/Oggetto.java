@@ -15,6 +15,8 @@ public class Oggetto {
 		super();
 		this.nome = nome;
 	}
+	
+	
 
 	/**
 	 * Override del metodo equals
@@ -24,6 +26,11 @@ public class Oggetto {
 	@Override
 	public boolean equals(Object oggetto) {
 		return this.nome.equals(((Oggetto) oggetto).getNome());
+	}
+	
+	@Override
+	public int hashCode() {
+		return this.nome.hashCode();
 	}
 
 	/**

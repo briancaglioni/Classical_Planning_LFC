@@ -1,5 +1,9 @@
 package util;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
 import org.antlr.runtime.Token;
 
 /**
@@ -9,7 +13,7 @@ import org.antlr.runtime.Token;
  */
 public class AttributoVariabile {
 	final String nome;
-	final Variabile variabile;
+	final ArrayList<Variabile> listaVariabili;
 	boolean not;
 
 	/**
@@ -20,11 +24,15 @@ public class AttributoVariabile {
 	 * @param variabile
 	 * @param tk
 	 */
-	public AttributoVariabile(String nome, Variabile variabile, Token tk) {
+	public AttributoVariabile(String nome, Token tk) {
 		super();
 		this.nome = nome;
-		this.variabile = variabile;
+		this.listaVariabili = new ArrayList<Variabile>();
 		this.not = tk == null ? false : true;
+	}
+	
+	public void addVariabile(String v) {
+		this.listaVariabili.add(new Variabile(v));
 	}
 
 	/**
@@ -33,20 +41,24 @@ public class AttributoVariabile {
 	 * @param attr
 	 */
 	@Override
-	public boolean equals(Object attr) {
-		if (!(attr instanceof AttributoVariabile))
-			return false;
-		return this.nome.equals(((AttributoVariabile) attr).getNome())
-				&& this.variabile.equals(((AttributoVariabile) attr).getVariabile())
-				&& this.not == (((AttributoVariabile) attr).isNot());
+	public boolean equals(Object att) {
+		if(! (att instanceof AttributoVariabile)) return false;
+		if(this == att) return true;
+		AttributoVariabile attr = (AttributoVariabile) att;
+		return this.nome.equals(attr.getNome()) && listEqualsIgnoreOrder(attr.getListaVariabili(), this.listaVariabili);
 	}
-
-	/**
-	 * Override del metodo toString.
-	 */
+	
+	public static <T> boolean listEqualsIgnoreOrder(List<T> list1, List<T> list2) {
+	    return new HashSet<>(list1).equals(new HashSet<>(list2));
+	}
 	@Override
 	public String toString() {
-		return this.nome + "(" + this.variabile + ")";
+		return this.nome  +": " + this.listaVariabili;
+	}
+	
+	@Override
+	public int hashCode() {
+		return this.listaVariabili.hashCode() + this.nome.hashCode() + Boolean.hashCode(this.isNot());
 	}
 
 	// Getters.
@@ -55,8 +67,8 @@ public class AttributoVariabile {
 		return nome;
 	}
 
-	public Variabile getVariabile() {
-		return variabile;
+	public ArrayList<Variabile> getListaVariabili() {
+		return listaVariabili;
 	}
 
 	public boolean isNot() {

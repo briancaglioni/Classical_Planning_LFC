@@ -47,7 +47,8 @@ public class ParserEnvironment {
 	 * @param m
 	 */
 	public void handleError(String[] tokenNames, RecognitionException e, String h, String m) {
-
+		
+		System.err.println("ERROR");
 //		        String st=h+m;
 		String st;
 		if (tokenNames[e.token.getType()].equals("ERROR"))

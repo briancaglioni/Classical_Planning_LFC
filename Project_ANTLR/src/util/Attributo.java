@@ -1,5 +1,9 @@
 package util;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
 /**
  * Attributo. Composto da un nome e da un oggetto a cui si riferisce
  * l'attributo.
@@ -7,7 +11,7 @@ package util;
  */
 public class Attributo {
 	final String nome;
-	final Oggetto oggetto;
+	final ArrayList<Oggetto> listaOggetti;
 
 	/**
 	 * Costruttore specificando il nome dell'attributo e dell'oggetto a cui si
@@ -16,20 +20,41 @@ public class Attributo {
 	 * @param name
 	 * @param oggetto
 	 */
-	public Attributo(String name, Oggetto oggetto) {
+	public Attributo(String name) {
 		super();
 		this.nome = name;
-		this.oggetto = oggetto;
+		this.listaOggetti = new ArrayList<Oggetto>();
+	}
+	
+	public Attributo(String name, ArrayList<Oggetto> listaOggetti) {
+		super();
+		this.nome = name;
+		this.listaOggetti = listaOggetti;
 	}
 
+	public void addOggetto(String o) {
+		this.listaOggetti.add(new Oggetto(o));
+	}
 	/**
 	 * Override del metodo equals
 	 * 
 	 * @param attr
 	 */
 	@Override
-	public boolean equals(Object attr) {
-		return this.nome.equals(((Attributo) attr).getNome()) && this.oggetto.equals(((Attributo) attr).getOggetto());
+	public boolean equals(Object att) {
+		if(! (att instanceof Attributo)) return false;
+		if(this == att) return true;
+		Attributo attr = (Attributo) att;
+		return this.nome.equals(attr.getNome()) && listEqualsIgnoreOrder(attr.getListaOggetti(), this.listaOggetti);
+	}
+	
+	public static <T> boolean listEqualsIgnoreOrder(List<T> list1, List<T> list2) {
+	    return new HashSet<>(list1).equals(new HashSet<>(list2));
+	}
+	
+	@Override
+	public int hashCode() {
+		return this.nome.hashCode() + this.listaOggetti.hashCode();
 	}
 
 	/**
@@ -37,7 +62,7 @@ public class Attributo {
 	 */
 	@Override
 	public String toString() {
-		return this.nome + "(" + this.oggetto + ")";
+		return this.nome + ": " + this.listaOggetti;
 	}
 
 	// Getters.
@@ -46,8 +71,8 @@ public class Attributo {
 		return nome;
 	}
 
-	public Oggetto getOggetto() {
-		return oggetto;
+	public ArrayList<Oggetto> getListaOggetti() {
+		return this.listaOggetti;
 	}
 
 	// Setters.

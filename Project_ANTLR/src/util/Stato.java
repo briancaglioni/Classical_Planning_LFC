@@ -29,9 +29,13 @@ public class Stato extends Symbol {
 	 */
 	public Stato(String nome, ArrayList<Attributo> listaAttributi) {
 		this.nome = nome;
-		this.listaAttributi = new ArrayList<Attributo>();
+		this.listaAttributi = new ArrayList<>();		
 		for (Attributo a : listaAttributi) {
-			this.listaAttributi.add(new Attributo(a.getNome(), new Oggetto(a.getOggetto().getNome())));
+			ArrayList<Oggetto> listaOggetti = new ArrayList<Oggetto>();
+			for(Oggetto o : a.getListaOggetti()) {
+				listaOggetti.add(new Oggetto(o.getNome()));
+			};
+			this.listaAttributi.add(new Attributo(a.getNome(), listaOggetti));
 		}
 
 	};
