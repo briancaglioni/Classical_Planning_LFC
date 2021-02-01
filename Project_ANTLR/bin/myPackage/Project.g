@@ -14,6 +14,7 @@ options {
 package myCompiler;
 import util.*;
 import java.util.Hashtable;
+import java.util.Scanner;
 
 }
 @members {
@@ -22,8 +23,10 @@ ParserEnvironment env;
  
   void init () {
     System.out.println("Inizio l'analisi!\n");
-    env = new ParserEnvironment ();
+    //env = new ParserEnvironment (GestioneInput.getInput("console"), GestioneInput.getInput("file"));
+    env = new ParserEnvironment (true, true);
     sem = new ParserSemantic (env);
+    
    }
   
   public Hashtable<String, Symbol> getVariables() {
@@ -45,6 +48,7 @@ ParserEnvironment env;
 start
 @init { init(); c = new Costo("0.0"); }
 	:	(definizione_stato | definizione_operatore | c=applicazione_azione[c])+
+		{env.printStatiPercorsi();}
 	;
 	
 

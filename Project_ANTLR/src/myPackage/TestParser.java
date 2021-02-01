@@ -53,7 +53,7 @@ public class TestParser {
   	
   	try {
   		
-  		ProjectLexer  lexer = new ProjectLexer (new ANTLRReaderStream(new FileReader(fileIn2))); 
+  		ProjectLexer  lexer = new ProjectLexer (new ANTLRReaderStream(new FileReader(fileIn))); 
   		CommonTokenStream tokens = new CommonTokenStream (lexer);	
 		parser = new ProjectParser (tokens);
 	    parser.start();

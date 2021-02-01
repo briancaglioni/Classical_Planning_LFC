@@ -1,0 +1,6 @@
+STATI PERCORSI:
+
+1. statoIniziale [on(O_A, O_Table), on(O_B, O_Table), on(O_C, O_A), free(O_B), free(O_C)]
+2. statoIntermedio [on(O_C, O_Table), free(O_A), on(O_B, O_C), on(O_A, O_B)]
+3. statoIntermedio [on(O_C, O_Table), free(O_A), on(O_B, O_C), on(O_A, O_B)]
+4. statoIntermedio [on(O_C, O_Table), free(O_A), on(O_B, O_C), on(O_A, O_B)]

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -62,6 +63,7 @@ public class ParserSemantic {
 	 */
 	public void registraStato(Stato nuovoStato) {
 		env.symbolTable.put(nuovoStato.getNome(), nuovoStato);
+		if (nuovoStato.getNome().equals("statoIniziale")) {env.addStato(nuovoStato);} // per salvataggio stati intermedi
 		System.out.println("\tAggiunto stato: " + nuovoStato.getNome());
 		System.out.println("\t"+nuovoStato);
 	}
@@ -120,25 +122,25 @@ public class ParserSemantic {
 		}
 
 		// Controllo warning
-//		ArrayList<AttributoVariabile> nuovo = new ArrayList<>(p.getPrecond());
-//		nuovo.retainAll(e.getEffetti());
-//		if (nuovo.size() > 0)
-//			addWarning(tk, nuovo + " attributi già soddisfatti nelle Precondizioni");
+		ArrayList<AttributoVariabile> nuovo = new ArrayList<>(p.getPrecond());
+		nuovo.retainAll(e.getEffetti());
+		if (nuovo.size() > 0)
+			addWarning(tk, nuovo + " attributi già soddisfatti nelle Precondizioni");
 
 		// Controllo negazione
-		// Predicate<AttributoVariabile> byNot = attrv -> attrv.isNot();
+		 Predicate<AttributoVariabile> byNot = attrv -> attrv.isNot();
 		// ERRORE, CONTROLLARE <----
 
-//		ArrayList<AttributoVariabile> negati = new ArrayList<>(
-//				e.getEffetti().stream().filter(attrv -> attrv.isNot() == true).collect(Collectors.toList()));
-//		boolean er = false;
-//		for (AttributoVariabile n : negati) {
-//			er = p.getPrecond().stream().anyMatch(attr -> attr.getNome().equals(n.getNome())
-//					&& attr.getVariabile().equals(n.getVariabile()) && attr.isNot() == false);
-//			if (!er)
-//				addError(tk, n + " non è presente nelle precondizioni");
-//			;
-//		}
+		ArrayList<AttributoVariabile> negati = new ArrayList<>(
+				e.getEffetti().stream().filter(attrv -> attrv.isNot() == true).collect(Collectors.toList()));
+		boolean er = false;
+		for (AttributoVariabile n : negati) {
+			er = p.getPrecond().stream().anyMatch(attr -> attr.getNome().equals(n.getNome())
+					&& listEqualsIgnoreOrder(attr.getListaVariabili(), n.getListaVariabili()) && attr.isNot() == false);
+			if (!er)
+				addError(tk, n + " non è presente nelle precondizioni");
+			;
+		}
 
 		Operatore nuovoOperatore = new Operatore(a, p, e, c);
 		env.symbolTable.put(String.valueOf(nuovoOperatore.getId()), nuovoOperatore);
@@ -216,6 +218,7 @@ public class ParserSemantic {
 			System.out.println("****************************************************************************************************");
 			System.out.println("    Precondizioni rispettate");
 			applicaEffetti(listaEffetti, listaV, listaA, listaO);
+				env.addStato(statoIntermedio);
 				System.out.println("    Effetti applicati");
 				System.out.println("    "+statoIntermedio);
 				System.out.println("    " + new Costo(String.valueOf(c.getValore() + a.getOperatore().getCosto().getValore()))+ "\n");
@@ -315,7 +318,11 @@ public class ParserSemantic {
 		listaA.addAll(listaAttrEffettiAgg);
 		// ArrayList<Attributo> listaADistinct = new ArrayList<>(new HashSet<>(listaA));
 	}
-
+/**
+ * Controlla se lo stato è finale
+ * @param statoIntermedio
+ * @return boolean: true = finale, false = non finale
+ */
 	private boolean controllaFinale(Stato statoIntermedio) {
 		Stato statoFinale = (Stato) env.symbolTable.get("statoFinale");
 		ArrayList<Attributo> listaIntermedia = statoIntermedio.getListaAttributi();
@@ -327,5 +334,9 @@ public class ParserSemantic {
 				return false;
 		}
 		return true;
+	}
+	
+	public static <T> boolean listEqualsIgnoreOrder(List<T> list1, List<T> list2) {
+	    return new HashSet<>(list1).equals(new HashSet<>(list2));
 	}
 }

@@ -45,7 +45,8 @@ public class AttributoVariabile {
 		if(! (att instanceof AttributoVariabile)) return false;
 		if(this == att) return true;
 		AttributoVariabile attr = (AttributoVariabile) att;
-		return this.nome.equals(attr.getNome()) && listEqualsIgnoreOrder(attr.getListaVariabili(), this.listaVariabili);
+		//------->> Riguardare il controllo sul NOT per Errori / Warnings <<-----
+		return this.nome.equals(attr.getNome()) && listEqualsIgnoreOrder(attr.getListaVariabili(), this.listaVariabili) && this.isNot() == ((AttributoVariabile) att).isNot();
 	}
 	
 	public static <T> boolean listEqualsIgnoreOrder(List<T> list1, List<T> list2) {

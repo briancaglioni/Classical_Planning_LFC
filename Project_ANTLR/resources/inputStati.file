@@ -1,2 +1,2 @@
-statoIniziale{on(O_A, O_Table), on(O_B, O_Table), on(O_C, O_A), free(O_B), free(O_C)},
+statoIniziale{on(O_A, O_Table), on(O_B, O_Table), on(O_C, O_A), free(O_B), free(O_C)}
 statoFinale{on(O_A, O_B),on(O_B, O_C),on(O_C, O_Table), free(O_A)}

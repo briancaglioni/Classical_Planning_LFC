@@ -62,9 +62,15 @@ public class Attributo {
 	 */
 	@Override
 	public String toString() {
-		return this.nome + ": " + this.listaOggetti;
+		return this.nome + "(" + getStringOggetti() + ")";
 	}
-
+	
+	private String getStringOggetti() {
+		String s = "";
+		for (Oggetto o : listaOggetti)
+			s += o.toString() + ", ";
+		return s.substring(0, s.length()-2);
+	}
 	// Getters.
 
 	public String getNome() {
