@@ -49,6 +49,7 @@ start
 @init { init(); c = new Costo("0.0"); }
 	:	(definizione_stato | definizione_operatore | c=applicazione_azione[c])+
 		{env.printStatiPercorsi();}
+		EOF
 	;
 	
 
