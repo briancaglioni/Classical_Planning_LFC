@@ -129,7 +129,6 @@ public class ParserSemantic {
 
 		// Controllo negazione
 		 Predicate<AttributoVariabile> byNot = attrv -> attrv.isNot();
-		// ERRORE, CONTROLLARE <----
 
 		ArrayList<AttributoVariabile> negati = new ArrayList<>(
 				e.getEffetti().stream().filter(attrv -> attrv.isNot() == true).collect(Collectors.toList()));
@@ -144,7 +143,7 @@ public class ParserSemantic {
 
 		Operatore nuovoOperatore = new Operatore(a, p, e, c);
 		env.symbolTable.put(String.valueOf(nuovoOperatore.getId()), nuovoOperatore);
-		System.out.println("\tAggiunto operatore: " + nuovoOperatore.getId());
+		System.out.println("\t- Aggiunto operatore: " + nuovoOperatore.getAzione().getNome());
 	}
 
 	/**
@@ -199,7 +198,8 @@ public class ParserSemantic {
 		if (op == null)
 			return c;
 		a.setOperatore(op);
-		System.out.println("\n\nApplica -> " + a.getNome() + " : " + a.getListaOggetti());
+		System.out.println("\n\n===========================================================================================================\n");
+		System.out.println("\nApplica -> " + a.getNome() + " : " + a.getListaOggetti());
 		Stato statoIntermedio;
 		if (env.symbolTable.containsKey("statoIntermedio")) {
 			statoIntermedio = (Stato) env.symbolTable.get("statoIntermedio");
@@ -215,22 +215,25 @@ public class ParserSemantic {
 		ArrayList<AttributoVariabile> listaEffetti = a.getOperatore().getEffetti().getEffetti();
 		boolean controlloP = controllaPrecondizioni(listaPrecond, listaV, listaA, listaO);
 		if (controlloP) {
-			System.out.println("****************************************************************************************************");
 			System.out.println("    Precondizioni rispettate");
 			applicaEffetti(listaEffetti, listaV, listaA, listaO);
-				env.addStato(statoIntermedio);
+				env.addStato(new Stato(statoIntermedio.getNome(), statoIntermedio.getListaAttributi()));
 				System.out.println("    Effetti applicati");
 				System.out.println("    "+statoIntermedio);
 				System.out.println("    " + new Costo(String.valueOf(c.getValore() + a.getOperatore().getCosto().getValore()))+ "\n");
-				System.out.println("****************************************************************************************************\n");
 				// controllo stato finale
 				if (controllaFinale(statoIntermedio)) {
-					System.out.println("\nHAI RAGGIUNTO LO STATO FINALE!!");
-					System.out.println(env.symbolTable.get("statoFinale"));
-					System.out.println("Costo totale: " + String.valueOf(c.getValore() + a.getOperatore().getCosto().getValore())+ "\n");
+					System.out.println("\n##########################");
+					System.out.println("# STATO FINALE RAGGIUNTO #");
+					System.out.println("##########################\n");
+					System.out.println("Costo totale: " + String.valueOf(c.getValore() + a.getOperatore().getCosto().getValore()));
+					System.out.println(env.symbolTable.get("statoFinale")+"\n");
+					
 
 				} else {
-					System.out.println("\nSTATO FINALE NON ANCORA RAGGIUNTO");
+					System.out.println("\n=====================================");
+					System.out.println("| STATO FINALE NON ANCORA RAGGIUNTO |");
+					System.out.println("=====================================\n");
 				
 					System.out.println(env.symbolTable.get("statoFinale"));
 				}
@@ -262,8 +265,8 @@ public class ParserSemantic {
 			listaAttrPrecond.add(attr);
 		}
 
-		System.out.println("Lista attributi stato: "+listaA);
-		System.out.println("Lista attributi precondizioni: "+listaAttrPrecond);
+		//System.out.println("Lista attributi stato: "+listaA);
+		//System.out.println("Lista attributi precondizioni: "+listaAttrPrecond);
 
 		return listaA.containsAll(listaAttrPrecond) ? true : false;
 
@@ -327,7 +330,7 @@ public class ParserSemantic {
 		Stato statoFinale = (Stato) env.symbolTable.get("statoFinale");
 		ArrayList<Attributo> listaIntermedia = statoIntermedio.getListaAttributi();
 		ArrayList<Attributo> listaFinale = statoFinale.getListaAttributi();
-		if (listaIntermedia.size() != listaFinale.size())
+		if (listaIntermedia.size() < listaFinale.size())
 			return false;
 		for (Attributo a : listaFinale) {
 			if (!listaIntermedia.contains(a))

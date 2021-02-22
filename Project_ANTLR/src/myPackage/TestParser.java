@@ -16,11 +16,10 @@ import myCompiler.ProjectParser;
 public class TestParser {
 	public static void main(String[] args) {
 		ProjectParser parser;
-		String fileInStati = ".\\resources\\inputStati.file";
-		String fileInOperatori = ".\\resources\\inputOperatori.file";
-		String fileInApplicazioni = ".\\resources\\inputApplicazioni.file";
-		String fileIn = ".\\resources\\input.file";
-		String fileIn2 = ".\\resources\\input2.file";
+		String fileInStati = ".\\resources\\Esempio_aeroporto\\inputStati.file";
+		String fileInOperatori = ".\\resources\\Esempio_aeroporto\\inputOperatori.file";
+		String fileInApplicazioni = ".\\resources\\Esempio_aeroporto\\inputApplicazioni.file";
+		String fileIn = ".\\resources\\Esempio_aeroporto\\input.file";
 		
 		String[] files = new String[3];
 		files[0] = fileInStati;

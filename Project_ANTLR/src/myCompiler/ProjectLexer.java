@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g 2021-02-04 15:00:04
+// $ANTLR 3.5.1 C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g 2021-02-22 23:14:18
 
 	package myCompiler;
 
@@ -58,8 +58,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = EQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:147:5: ( '=' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:147:7: '='
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:146:5: ( '=' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:146:7: '='
 			{
 			match('='); 
 			}
@@ -78,8 +78,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = OPT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:148:5: ( '(' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:148:7: '('
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:147:5: ( '(' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:147:7: '('
 			{
 			match('('); 
 			}
@@ -98,8 +98,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = CPT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:149:5: ( ')' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:149:7: ')'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:148:5: ( ')' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:148:7: ')'
 			{
 			match(')'); 
 			}
@@ -118,8 +118,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = OPG;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:150:5: ( '{' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:150:7: '{'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:149:5: ( '{' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:149:7: '{'
 			{
 			match('{'); 
 			}
@@ -138,8 +138,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = CPG;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:151:5: ( '}' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:151:7: '}'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:150:5: ( '}' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:150:7: '}'
 			{
 			match('}'); 
 			}
@@ -158,8 +158,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = COMMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:152:7: ( ',' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:152:9: ','
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:151:7: ( ',' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:151:9: ','
 			{
 			match(','); 
 			}
@@ -178,8 +178,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = PV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:153:4: ( ';' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:153:6: ';'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:152:4: ( ';' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:152:6: ';'
 			{
 			match(';'); 
 			}
@@ -198,8 +198,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = TRUE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:154:6: ( 'T' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:154:8: 'T'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:153:6: ( 'T' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:153:8: 'T'
 			{
 			match('T'); 
 			}
@@ -218,8 +218,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = FALSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:155:8: ( 'F' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:155:10: 'F'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:154:8: ( 'F' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:154:10: 'F'
 			{
 			match('F'); 
 			}
@@ -238,8 +238,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = NOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:156:5: ( '!' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:156:7: '!'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:155:5: ( '!' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:155:7: '!'
 			{
 			match('!'); 
 			}
@@ -258,8 +258,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = STATOINIZIALE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:158:15: ( 'statoIniziale' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:158:18: 'statoIniziale'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:157:15: ( 'statoIniziale' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:157:18: 'statoIniziale'
 			{
 			match("statoIniziale"); 
 
@@ -279,8 +279,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = STATOFINALE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:159:13: ( 'statoFinale' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:159:16: 'statoFinale'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:158:13: ( 'statoFinale' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:158:16: 'statoFinale'
 			{
 			match("statoFinale"); 
 
@@ -300,8 +300,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = OPERATORE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:161:2: ( 'operatore' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:161:4: 'operatore'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:160:2: ( 'operatore' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:160:4: 'operatore'
 			{
 			match("operatore"); 
 
@@ -321,8 +321,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = PRECONDIZIONI;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:164:2: ( 'precondizioni' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:164:4: 'precondizioni'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:163:2: ( 'precondizioni' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:163:4: 'precondizioni'
 			{
 			match("precondizioni"); 
 
@@ -342,8 +342,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = EFFETTI;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:165:9: ( 'effetti' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:165:11: 'effetti'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:164:9: ( 'effetti' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:164:11: 'effetti'
 			{
 			match("effetti"); 
 
@@ -363,8 +363,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = COSTO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:166:7: ( 'costo' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:166:9: 'costo'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:165:7: ( 'costo' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:165:9: 'costo'
 			{
 			match("costo"); 
 
@@ -384,17 +384,17 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = OGGETTO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:169:10: ( ( 'O_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+ )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:169:12: ( 'O_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:168:10: ( ( 'O_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+ )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:168:12: ( 'O_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
 			{
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:169:12: ( 'O_' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:169:13: 'O_'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:168:12: ( 'O_' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:168:13: 'O_'
 			{
 			match("O_"); 
 
 			}
 
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:169:19: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:168:19: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -443,17 +443,17 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = VARIABILE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:170:12: ( ( 'V_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+ )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:170:14: ( 'V_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:169:12: ( ( 'V_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+ )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:169:14: ( 'V_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
 			{
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:170:14: ( 'V_' )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:170:15: 'V_'
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:169:14: ( 'V_' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:169:15: 'V_'
 			{
 			match("V_"); 
 
 			}
 
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:170:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:169:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -502,8 +502,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:171:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:171:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:170:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:170:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -513,7 +513,7 @@ public class ProjectLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:171:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:170:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -558,10 +558,10 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:173:5: ( ( '0' .. '9' )+ )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:173:7: ( '0' .. '9' )+
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:172:5: ( ( '0' .. '9' )+ )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:172:7: ( '0' .. '9' )+
 			{
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:173:7: ( '0' .. '9' )+
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:172:7: ( '0' .. '9' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -610,7 +610,7 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = FLOAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:176:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )? | '.' ( '0' .. '9' )? | ( '0' .. '9' ) )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:175:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )? | '.' ( '0' .. '9' )? | ( '0' .. '9' ) )
 			int alt8=3;
 			int LA8_0 = input.LA(1);
 			if ( ((LA8_0 >= '0' && LA8_0 <= '9')) ) {
@@ -636,9 +636,9 @@ public class ProjectLexer extends Lexer {
 
 			switch (alt8) {
 				case 1 :
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:176:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )?
+					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:175:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )?
 					{
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:176:9: ( '0' .. '9' )+
+					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:175:9: ( '0' .. '9' )+
 					int cnt5=0;
 					loop5:
 					while (true) {
@@ -672,7 +672,7 @@ public class ProjectLexer extends Lexer {
 					}
 
 					match('.'); 
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:176:25: ( '0' .. '9' )?
+					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:175:25: ( '0' .. '9' )?
 					int alt6=2;
 					int LA6_0 = input.LA(1);
 					if ( ((LA6_0 >= '0' && LA6_0 <= '9')) ) {
@@ -698,10 +698,10 @@ public class ProjectLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:177:9: '.' ( '0' .. '9' )?
+					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:176:9: '.' ( '0' .. '9' )?
 					{
 					match('.'); 
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:177:13: ( '0' .. '9' )?
+					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:176:13: ( '0' .. '9' )?
 					int alt7=2;
 					int LA7_0 = input.LA(1);
 					if ( ((LA7_0 >= '0' && LA7_0 <= '9')) ) {
@@ -727,7 +727,7 @@ public class ProjectLexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:178:9: ( '0' .. '9' )
+					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:177:9: ( '0' .. '9' )
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -755,7 +755,7 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:182:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:181:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
 			int alt12=2;
 			int LA12_0 = input.LA(1);
 			if ( (LA12_0=='/') ) {
@@ -789,11 +789,11 @@ public class ProjectLexer extends Lexer {
 
 			switch (alt12) {
 				case 1 :
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:182:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:181:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 					{
 					match("//"); 
 
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:182:14: (~ ( '\\n' | '\\r' ) )*
+					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:181:14: (~ ( '\\n' | '\\r' ) )*
 					loop9:
 					while (true) {
 						int alt9=2;
@@ -822,7 +822,7 @@ public class ProjectLexer extends Lexer {
 						}
 					}
 
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:182:28: ( '\\r' )?
+					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:181:28: ( '\\r' )?
 					int alt10=2;
 					int LA10_0 = input.LA(1);
 					if ( (LA10_0=='\r') ) {
@@ -830,7 +830,7 @@ public class ProjectLexer extends Lexer {
 					}
 					switch (alt10) {
 						case 1 :
-							// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:182:28: '\\r'
+							// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:181:28: '\\r'
 							{
 							match('\r'); 
 							}
@@ -843,11 +843,11 @@ public class ProjectLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:183:9: '/*' ( options {greedy=false; } : . )* '*/'
+					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:182:9: '/*' ( options {greedy=false; } : . )* '*/'
 					{
 					match("/*"); 
 
-					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:183:14: ( options {greedy=false; } : . )*
+					// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:182:14: ( options {greedy=false; } : . )*
 					loop11:
 					while (true) {
 						int alt11=2;
@@ -868,7 +868,7 @@ public class ProjectLexer extends Lexer {
 
 						switch (alt11) {
 						case 1 :
-							// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:183:42: .
+							// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:182:42: .
 							{
 							matchAny(); 
 							}
@@ -900,8 +900,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:186:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:186:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:185:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:185:9: ( ' ' | '\\t' | '\\r' | '\\n' )
 			{
 			if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 				input.consume();
@@ -928,8 +928,8 @@ public class ProjectLexer extends Lexer {
 		try {
 			int _type = ERROR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:192:7: ( . )
-			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:193:2: .
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:191:7: ( . )
+			// C:\\GitHub\\Classical_Planning_LFC\\Project_ANTLR\\src\\myPackage\\Project.g:192:2: .
 			{
 			matchAny(); 
 			}

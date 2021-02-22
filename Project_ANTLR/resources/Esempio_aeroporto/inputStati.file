@@ -1,0 +1,2 @@
+statoIniziale{at(O_Cargo1, O_BGY), at(O_Cargo2, O_MXP), at(O_Plane1, O_BGY), at(O_Plane2, O_MXP)}
+statoFinale{at(O_Cargo2, O_BGY), at(O_Cargo1, O_MXP)}

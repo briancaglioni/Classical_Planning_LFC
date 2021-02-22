@@ -23,8 +23,8 @@ ParserEnvironment env;
  
   void init () {
     System.out.println("Inizio l'analisi!\n");
-    //env = new ParserEnvironment (GestioneInput.getInput("console"), GestioneInput.getInput("file"));
-    env = new ParserEnvironment (true, true);
+    env = new ParserEnvironment (GestioneInput.getInput("console"), GestioneInput.getInput("file"));
+    //env = new ParserEnvironment (true, true);
     sem = new ParserSemantic (env);
     
    }
@@ -35,7 +35,6 @@ ParserEnvironment env;
   
   public void displayRecognitionError(String[] tokenNames,
                                      RecognitionException e) {
-     System.err.println("ERROREEE");
      String hdr = getErrorHeader(e);
      String msg = getErrorMessage(e, tokenNames);
      Token tk = input.LT(1);

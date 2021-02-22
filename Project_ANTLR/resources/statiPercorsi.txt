@@ -1,6 +1,9 @@
 STATI PERCORSI:
 
-1. statoIniziale [on(O_A, O_Table), on(O_B, O_Table), on(O_C, O_A), free(O_B), free(O_C)]
-2. statoIntermedio [on(O_C, O_Table), free(O_A), on(O_B, O_C), on(O_A, O_B)]
-3. statoIntermedio [on(O_C, O_Table), free(O_A), on(O_B, O_C), on(O_A, O_B)]
-4. statoIntermedio [on(O_C, O_Table), free(O_A), on(O_B, O_C), on(O_A, O_B)]
+1. statoIniziale [at(O_Cargo1, O_BGY), at(O_Cargo2, O_MXP), at(O_Plane1, O_BGY), at(O_Plane2, O_MXP)]
+2. statoIntermedio [at(O_Cargo2, O_MXP), at(O_Plane1, O_BGY), at(O_Plane2, O_MXP), in(O_Cargo1, O_Plane1)]
+3. statoIntermedio [at(O_Cargo2, O_MXP), at(O_Plane2, O_MXP), in(O_Cargo1, O_Plane1), at(O_Plane1, O_MXP)]
+4. statoIntermedio [at(O_Cargo2, O_MXP), at(O_Plane2, O_MXP), at(O_Plane1, O_MXP), at(O_Cargo1, O_MXP)]
+5. statoIntermedio [at(O_Plane2, O_MXP), at(O_Plane1, O_MXP), at(O_Cargo1, O_MXP), in(O_Cargo2, O_Plane2)]
+6. statoIntermedio [at(O_Plane1, O_MXP), at(O_Cargo1, O_MXP), in(O_Cargo2, O_Plane2), at(O_Plane2, O_BGY)]
+7. statoIntermedio [at(O_Plane1, O_MXP), at(O_Cargo1, O_MXP), at(O_Plane2, O_BGY), at(O_Cargo2, O_BGY)]

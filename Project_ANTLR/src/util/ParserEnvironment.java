@@ -56,7 +56,6 @@ public class ParserEnvironment {
 	 */
 	public void handleError(String[] tokenNames, RecognitionException e, String h, String m) {
 		
-		System.err.println("ERROR");
 		String st;
 		if (tokenNames[e.token.getType()].equals("ERROR"))
 			st = "Lexical Error at [" + e.token.getLine() + ", " + e.token.getCharPositionInLine() + "] : "
