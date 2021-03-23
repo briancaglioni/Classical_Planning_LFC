@@ -1,0 +1,13 @@
+operatore{
+	spostaSulTavolo(V_oggetto, V_Table, V_oggettobloccato),
+	precondizioni = {free(V_oggetto), on(V_oggetto, V_oggettobloccato)},
+	effetti = {on(V_oggetto, V_Table), free(V_oggettobloccato), !on(V_oggetto, V_oggettobloccato)},
+	costo = 1.0
+}
+
+operatore{
+	sposta(V_ogg1, V_ogg2, V_ogg3),
+	precondizioni = {free(V_ogg1), free(V_ogg2), on(V_ogg1, V_ogg3)},
+	effetti = {on(V_ogg1, V_ogg2), !free(V_ogg2), !on(V_ogg1, V_ogg3)},
+	costo = 1.5
+}

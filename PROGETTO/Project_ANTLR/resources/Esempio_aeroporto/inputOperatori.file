@@ -1,0 +1,20 @@
+operatore{
+	load(V_Cargo, V_Plane, V_Airport),
+	precondizioni = {at(V_Cargo, V_Airport), at(V_Plane, V_Airport)},
+	effetti = {!at(V_Cargo, V_Airport), in(V_Cargo, V_Plane)},
+	costo = 2.0
+}
+
+operatore{
+	unload(V_Cargo, V_Plane, V_Airport),
+	precondizioni = {in(V_Cargo, V_Plane), at(V_Plane, V_Airport)},
+	effetti = {at(V_Cargo, V_Airport), !in(V_Cargo, V_Plane)},
+	costo = 1.0
+}
+
+operatore{
+	fly(V_Departure, V_Plane, V_Arrival),
+	precondizioni = {at(V_Plane, V_Departure)},
+	effetti = {!at(V_Plane, V_Departure), at(V_Plane, V_Arrival)},
+	costo = 5.5
+}

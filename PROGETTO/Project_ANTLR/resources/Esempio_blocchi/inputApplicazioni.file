@@ -1,0 +1,3 @@
+spostaSulTavolo(O_C, O_Table, O_A)
+sposta(O_B, O_C, O_Table)
+sposta(O_A, O_B, O_Table) 			
